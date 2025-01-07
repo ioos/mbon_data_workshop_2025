@@ -12,11 +12,21 @@ April 7th, 2025
 09:00 - 17:00 EDT
 
 **Instructors:** 
+Casey Godwin, 
+Connie Kot, 
+Felimon Gayanilo,  
+Katherine Silliman, 
+Kathleen Pitz,
+Laura Brenskelle,
+Luke Thompson,
 Mathew Biddle, 
-Laura Brenskelle, 
-Steve Formel, 
-Tylar Murray, 
-Carolina Peralta, 
+Ana Peralta Brichtova, 
+Stephen Formel,
+Frank Muller-Karger,
+Daniel Otis,
+Tylar Murray,
+Michael Lonneman,
+Dylan Pugh
 
 **Helpers:** 
 
