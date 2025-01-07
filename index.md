@@ -1,40 +1,24 @@
 ---
-title: Marine Biological Data Mobilization Workshop 2024
+title: MBON Data Mobilization Workshop 2025
 site: sandpaper::sandpaper_site
 ---
 
-OBIS-USA, IOOS, Hakai, CIOOS, MBON, OTN, OBIS, Caribbean-OBIS, OBIS-Chile
+OBIS-USA, IOOS, MBON, OTN, OBIS, Caribbean-OBIS
 
-Online
+University of New Hampshire, Durham, NH
 
-April 22-23, 2024
+April 7th, 2025
 
-13:00 - 17:00 EDT
+09:00 - 17:00 EDT
 
 **Instructors:** 
 Mathew Biddle, 
 Laura Brenskelle, 
 Steve Formel, 
-Elizabeth Lawrence, 
 Tylar Murray, 
 Carolina Peralta, 
-Jonathan Pye, 
-Tim van der Stap
 
 **Helpers:** 
-Pedro Pablo Aros, 
-Caitlin Bate, 
-Nicolás Bralic, 
-Bruce Delo, 
-Angela Dini, 
-Braulio Fernandez, 
-Pamela Fierro, 
-Ignacio Ibanez, 
-Brian Jones, 
-Shannon Landovskis, 
-YingHuan Niu, 
-Kyla Richards, 
-Joxmer Scott-Frias
 
 
 ## General Information
@@ -77,8 +61,7 @@ this [two minute video](https://youtu.be/E6NblAC-1uE) and this [two minute video
 share them with those you want to work with to share data.
 
 **When:**
-April 22-23, 2024.
-April 24th will be an optional day to attend for Workshop Participants if they require additional help.
+April 7th, 2025
 
 **Requirements:**
 
@@ -96,6 +79,10 @@ anything we can do to make this workshop more accessible to you.
 Please visit <a href="https://obis.org/contact/">https://obis.org/contact/</a> for more information. 
 
 ## Schedule
+
+__TODO: Adjust when schedule is set__
+
+<!--
 __Times are in EDT.__
 
 The videos created for the Marine Biological Data Mobilization Workshop can be found in [this playlist](https://youtube.com/playlist?list=PLlgUwSvpCFS7zytaWbZ6f4Szm3PnpFj_J).
@@ -124,3 +111,4 @@ The videos created for the Marine Biological Data Mobilization Workshop can be f
 | 17:00 | Finish                                                                                                                                                                                                                                                                                      |
 | End   | Post-workshop help & survey                                                                                                                                                                                                                                                                 |
 
+-->
