@@ -34,10 +34,10 @@ life_cycle: 'alpha' # FIXME
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/MathewBiddle/mbon_data_workshop_2025' # FIXME
+source: 'https://github.com/ioos/mbon_data_workshop_2025' # FIXME
 
 # Default branch of your lesson
-branch: 'gh-pages'
+branch: 'main'
 
 # Who to contact if there are any issues
 contact: 'https://obis.org/contact/' # FIXME
