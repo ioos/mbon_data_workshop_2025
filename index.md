@@ -11,10 +11,10 @@ April 7th, 2025
 
 09:00 - 17:00 EDT
 
-**Instructors:** 
+**Coordinators:** 
 Casey Godwin, 
 Connie Kot, 
-Felimon Gayanilo,  
+Felimon Gayanilo,
 Katherine Silliman, 
 Kathleen Pitz,
 Laura Brenskelle,
