@@ -9,7 +9,7 @@ University of New Hampshire, Durham, NH
 
 April 7th, 2025
 
-09:00 - 17:00 EDT
+08:30 - 16:30 EDT
 
 **Coordinators:** 
 Casey Godwin, 
@@ -27,9 +27,6 @@ Daniel Otis,
 Tylar Murray,
 Michael Lonneman,
 Dylan Pugh
-
-**Helpers:** 
-
 
 ## General Information
 
@@ -90,35 +87,32 @@ Please visit <a href="https://obis.org/contact/">https://obis.org/contact/</a> f
 
 ## Schedule
 
-__TODO: Adjust when schedule is set__
+__All times are in EDT.__
 
-<!--
-__Times are in EDT.__
+### April 7
 
-The videos created for the Marine Biological Data Mobilization Workshop can be found in [this playlist](https://youtube.com/playlist?list=PLlgUwSvpCFS7zytaWbZ6f4Szm3PnpFj_J).
+Time |  Activity
+---|---
+8:30 - 9:00 |  Arrival <br> (*Light continental breakfast*) <br>
+9:00 - 9:30  |  Introductions to you and your data
+9:30 - 10:30  |  Occurrence Core Working Session
+10:30 - 10:45  |  Break <br> (*Coffee and tea*) <br>
+10:45 - 11:00  |  Occurrence Core Q&A / Wrap-up
+11:00 - 12:00  |  Event Core Working Session
+12:00 - 13:00  |  Lunch <br> (*Provided*) <br>
+13:00 - 13:15  |  Event Core Q&A / Wrap-up
+13:15- 14:30  |  Extensions Working Session
+14:30 - 14:45  | Break <br> (*Coffee and tea*) <br>
+14:45 - 15:00  |  Extensions Q&A / Wrap-up
+15:00 - 16:00  |  Observation Method-Specific Recommendations
+16:00 - 16:30  | Final Q&A / Wrap-up
 
-### April 22
 
-| 13:00 | Introduction to Darwin Core                                                                                                                                                                                                                                                          |
-|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 13:10 | <br>          Breakout Rooms<br>          <br>            Darwin Core Terms 1<br>            Darwin Core Terms 2<br>            Data Cleaning<br>            WoRMS lookup<br>            Creating the Schema<br>            QA/QC, Metadata and Publishing<br>          <br>         |
-| 14:30 | Social Break                                                                                                                                                                                                                                                                         |
-| 15:00 | Data Cleaning                                                                                                                                                                                                                                                                        |
-| 15:10 | <br>          Breakout Rooms<br>          <br>            Darwin Core Terms 1<br>            Darwin Core Terms 2<br>            Data Cleaning<br>            WoRMS lookup<br>            Creating the Schema<br>            QA/QC, Metadata and Publishing<br>          <br>         |
-| 16:30 | Return to Main Room                                                                                                                                                                                                                                                                  |
-| 17:00 | Finish                                                                                                                                                                                                                                                                               |
+### April 8
+*Note: There is no provided breakfast this morning.*
 
-### April 23
-
-| 13:00 | Darwin Core and Extension Schemas                                                                                                                                                                                                                                                           |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 13:10 | <br>          Breakout Rooms<br>          <br>            Darwin Core Terms / WoRMS<br>            Data Cleaning<br>            Creating the Schema<br>            QA/QC, Metadata and Publishing<br>            DNA Derived Data<br>            Animal Telemetry<br>          <br>         |
-| 14:30 | Social Break                                                                                                                                                                                                                                                                                |
-| 15:00 | QA QC                                                                                                                                                                                                                                                                                       |
-| 15:10 | Metadata and publishing                                                                                                                                                                                                                                                                     |
-| 15:20 | <br>          Breakout Rooms<br>          <br>            Darwin Core Terms / WoRMS<br>            Data Cleaning<br>            Creating the Schema<br>            QA/QC, Metadata and Publishing<br>            DNA Derived Data<br>            Animal Telemetry<br>          <br>         |
-| 16:30 | Return to Main Room                                                                                                                                                                                                                                                                         |
-| 17:00 | Finish                                                                                                                                                                                                                                                                                      |
-| End   | Post-workshop help & survey                                                                                                                                                                                                                                                                 |
-
--->
+Time |  Activity
+---|---
+8:30 - 12:00 |  Data Social Hour <br> *Optional time for further data discussions* <br>
+11:30 - 12:00  |  Lunch
+13:00 - onward  |  MBON All Hands Meeting
