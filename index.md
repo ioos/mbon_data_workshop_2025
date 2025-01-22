@@ -114,5 +114,5 @@ Time |  Activity
 Time |  Activity
 ---|---
 8:30 - 12:00 |  Data Social Hour <br> *Optional time for further data discussions* <br>
-11:30 - 12:00  |  Lunch <br> *Holloway Commons Dining Hall - tickets available* <br>
+11:30 - 12:00  |  Lunch <br> *Holloway Commons Dining Hall - ticketed* <br>
 13:00 - onward  |  MBON All Hands Meeting
