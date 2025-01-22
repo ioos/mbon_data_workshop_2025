@@ -106,7 +106,7 @@ Time |  Activity
 11:00 - 12:00  |  Event Core Working Session
 12:00 - 13:00  |  Lunch <br> *Provided* <br>
 13:00 - 13:15  |  Event Core Q&A / Wrap-up
-13:15- 14:30  |  Extensions Working Session
+13:15 - 14:30  |  Extensions Working Session
 14:30 - 14:45  | Break <br> *Coffee and tea* <br>
 14:45 - 15:00  |  Extensions Q&A / Wrap-up
 15:00 - 16:00  |  Observation Method-Specific Recommendations
