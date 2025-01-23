@@ -27,9 +27,12 @@ Dylan Pugh
 08:30 - 11:30 EDT April 8th, 2025 _Optional_
 
 ## Where:
-```Memorial Union Building
+
+```
+Memorial Union Building
 University of New Hampshire, Durham, NH 03824
-3rd Level - Rooms 330-340```
+3rd Level - Rooms 330-340
+```
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2911.5801006982406!2d-70.93253572344233!3d43.134346385833425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2934d8ef2e32f%3A0x2decc5e98b35d2d!2sMemorial%20Union%20Building!5e0!3m2!1sen!2sus!4v1737563338824!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
