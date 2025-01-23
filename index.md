@@ -3,19 +3,6 @@ title: MBON Data Mobilization Workshop 2025
 site: sandpaper::sandpaper_site
 ---
 
-Memorial Union Building
-
-University of New Hampshire, Durham, NH 03824
-
-3rd Level - Rooms 330-340
-
-April 7th, 2025
-
-08:30 - 16:30 EDT
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2911.5801006982406!2d-70.93253572344233!3d43.134346385833425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2934d8ef2e32f%3A0x2decc5e98b35d2d!2sMemorial%20Union%20Building!5e0!3m2!1sen!2sus!4v1737563338824!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
 **Coordinators:** 
 Casey Godwin, 
 Connie Kot, 
@@ -35,7 +22,7 @@ Dylan Pugh
 
 ## General Information
 
-This workshop is intended to be a small hands-on, interactive virtual workshop focused on mobilizing 
+This workshop is intended to be a small hands-on, interactive in-person workshop focused on mobilizing 
 marine biological observation datasets to the [Ocean Biodiversity Information System (OBIS)](https://obis.org) 
 by helping data providers standardize their data using Darwin Core including species observations from any 
 type of sampling methodologies (e.g. visual surveys, net tows, microscopy, fish trawls, imaging, 'omics, 
@@ -55,10 +42,10 @@ The goal is that by the end of the workshop you will have a dataset in a final s
 We are hoping to address some of the blockers that you identified, including: lack of time, training, and specific 
 formatting questions.
 
-We have a short time together therefore our focus will be hands-on work in breakout rooms using the dataset you bring 
-to the workshop. We will not have many presentations and they will be relatively short. Instead we will have large 
-portions of time for you to work on your data and ask questions when you hit a stumbling block. **Therefore, if you do 
-not have a dataset to work on you may not find this workshop a good use of your time**.
+We have a short time together therefore our focus will be hands-on work using the dataset you bring to the workshop. 
+We will not have many presentations and they will be relatively short. 
+Instead we will have large portions of time for you to work on your data and ask questions when you hit a stumbling block. 
+**Therefore, if you do not have a dataset to work on you may not find this workshop a good use of your time**.
 
 What this workshop will **not** cover:
 
@@ -74,6 +61,19 @@ share them with those you want to work with to share data.
 
 **When:**
 April 7th, 2025
+
+_Optional morning_ April 8th, 2025 
+
+**Where:**
+```
+Memorial Union Building
+University of New Hampshire, Durham, NH 03824
+3rd Level - Rooms 330-340
+April 7th, 2025
+08:30 - 16:30 EDT
+```
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2911.5801006982406!2d-70.93253572344233!3d43.134346385833425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2934d8ef2e32f%3A0x2decc5e98b35d2d!2sMemorial%20Union%20Building!5e0!3m2!1sen!2sus!4v1737563338824!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 **Requirements:**
 
