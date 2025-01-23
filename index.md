@@ -20,6 +20,19 @@ Tylar Murray,
 Michael Lonneman,
 Dylan Pugh
 
+## When:
+
+08:30 - 16:30 EDT April 7th, 2025
+
+08:30 - 11:30 EDT April 8th, 2025 _Optional_
+
+## Where:
+```Memorial Union Building
+University of New Hampshire, Durham, NH 03824
+3rd Level - Rooms 330-340```
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2911.5801006982406!2d-70.93253572344233!3d43.134346385833425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2934d8ef2e32f%3A0x2decc5e98b35d2d!2sMemorial%20Union%20Building!5e0!3m2!1sen!2sus!4v1737563338824!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 ## General Information
 
 This workshop is intended to be a small hands-on, interactive in-person workshop focused on mobilizing 
@@ -59,25 +72,9 @@ If you would like to learn more about OBIS and a short rationale for sharing dat
 this [two minute video](https://youtu.be/E6NblAC-1uE) and this [two minute video](https://youtu.be/mmD-EYNOrFA) and 
 share them with those you want to work with to share data.
 
-**When:**
-April 7th, 2025
-
-_Optional morning_ April 8th, 2025 
-
-**Where:**
-```
-Memorial Union Building
-University of New Hampshire, Durham, NH 03824
-3rd Level - Rooms 330-340
-April 7th, 2025
-08:30 - 16:30 EDT
-```
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2911.5801006982406!2d-70.93253572344233!3d43.134346385833425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e2934d8ef2e32f%3A0x2decc5e98b35d2d!2sMemorial%20Union%20Building!5e0!3m2!1sen!2sus!4v1737563338824!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
 **Requirements:**
 
-* Must have a dataset to work on.
+* Must have a dataset to work on. See [data setup](https://ioos.github.io/mbon_data_workshop_2025/#data-setup) for details on what minimum requirements your data should meet at the time of the workshop.
 * Must have some R or Python experience.
 * Must have a basic knowledge of GitHub.
 * Participants must bring a laptop with R and RStudio or Python software installed.
@@ -98,9 +95,9 @@ __All times are in EDT.__
 
 Time |  Activity
 ---|---
-8:30 - 9:00 |  Arrival <br> *Light continental breakfast* <br>
-9:00 - 9:30  |  Introductions to you and your data
-9:30 - 10:30  |  Occurrence Core Working Session
+08:30 - 09:00 |  Arrival <br> *Light continental breakfast* <br>
+09:00 - 09:30  |  Introductions to you and your data
+09:30 - 10:30  |  Occurrence Core Working Session
 10:30 - 10:45  |  Break <br> *Coffee and tea* <br>
 10:45 - 11:00  |  Occurrence Core Q&A / Wrap-up
 11:00 - 12:00  |  Event Core Working Session
@@ -118,6 +115,6 @@ Time |  Activity
 
 Time |  Activity
 ---|---
-8:30 - 12:00 |  Data Social Hour <br> *Optional time for further data discussions* <br>
+08:30 - 11:30 |  Data Social Hour <br> *Optional time for further data discussions* <br>
 11:30 - 12:00  |  Lunch <br> *Holloway Commons Dining Hall - ticketed* <br>
 13:00 - onward  |  MBON All Hands Meeting
