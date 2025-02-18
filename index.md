@@ -99,10 +99,11 @@ __All times are in EDT.__
 Time |  Activity
 ---|---
 08:30 - 09:00 |  Arrival <br> *Light continental breakfast* <br>
-09:00 - 09:30  |  Introductions to you and your data
+09:00 - 09:15  |  Introductions to you and your data
+09:15 - 09:30  |  OBIS-USA IPT Introduction
 09:30 - 10:30  |  Occurrence Core Working Session
 10:30 - 10:45  |  Break <br> *Coffee and tea* <br>
-10:45 - 11:00  |  Occurrence Core Q&A / Wrap-up
+10:45 - 11:00  |  Occurrence Core + IPT Q&A / Wrap-up
 11:00 - 12:00  |  Event Core Working Session
 12:00 - 13:00  |  Lunch <br> *Provided* <br>
 13:00 - 13:15  |  Event Core Q&A / Wrap-up
