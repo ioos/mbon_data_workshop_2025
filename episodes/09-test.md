@@ -24,7 +24,7 @@ exercises: 90
 
 ## OBIS-USA IPT Introduction
 
-# Darwin Core - Cores and Extensions
+### Darwin Core - Cores and Extensions
 
 ## Occurrence Core
 
