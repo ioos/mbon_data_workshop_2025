@@ -41,8 +41,6 @@ When you are doing your mappings to Darwin Core, what terms are required? Right 
 ## Event Core
 What terms are required in Event core?
 
-:::::::::::: spoiler
-
 | Darwin Core Term | Role | Definition | Comment | Example |
 |------------------|-----------|-------------------------------------------|---------------------------------------|-----------------|
 | [eventID](https://dwc.tdwg.org/terms/#dwc:eventID) | **required** | An identifier for the set of information associated with an Event (something that occurs at a place and time). May be a global unique identifier or an identifier specific to the data set. | `INBO:VIS:Ev:00009375`<br/>`Station_95_Date_09JAN1997:14:35:00.000` <br/> `FFS-216:2007-09-21:A:replicateID1024`|
