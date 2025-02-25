@@ -41,6 +41,8 @@ When you are doing your mappings to Darwin Core, what terms are required? Right 
 ## Event Core
 What terms are required in Event core?
 
+:::::::::::: spoiler
+
 | Darwin Core Term | Role | Definition | Comment | Example |
 |------------------|-----------|-------------------------------------------|---------------------------------------|-----------------|
 | [eventID](https://dwc.tdwg.org/terms/#dwc:eventID) | **required** | An identifier for the set of information associated with an Event (something that occurs at a place and time). May be a global unique identifier or an identifier specific to the data set. | `INBO:VIS:Ev:00009375`<br/>`Station_95_Date_09JAN1997:14:35:00.000` <br/> `FFS-216:2007-09-21:A:replicateID1024`|
@@ -49,6 +51,8 @@ What terms are required in Event core?
 | [`decimalLongitude`](https://dwc.tdwg.org/terms/#dwc:decimalLongitude) | **required** | The geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive | For OBIS and GBIF the required `geodeticDatum` is WGS84. See more information on coordinates in the [Data Cleaning]({{ page.root }}/03-data-cleaning/index.html) section of the workshop. | -121.1761111 |
 | [`countryCode`](https://dwc.tdwg.org/terms/#dwc:countryCode) | **required** | The standard code for the country in which the location occurs. | Use an [ISO 3166-1-alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code. Not required for OBIS but GBIF prefers to have this for their system. For international waters, leave blank. | US, MX, CA |
 | [`geodeticDatum`](https://dwc.tdwg.org/terms/#dwciri:geodeticDatum) | **required** | The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in decimalLatitude and decimalLongitude as based. | Must be [WGS84](https://epsg.io/4326) for data shared to OBIS and GBIF but it's best to state explicitly that it is. | WGS84 |
+
+::::::::::::::::::::
 
 ## Extensions
 Nothing is required from the OBIS perspective but if you are using the Extended Measurement or Fact extension other than eventID, which is required to link the extension back to the Event core. You can also use occurrenceID to link to occurrence records in the Occurrence core or extension. See here for all potential fields in the extension and what goes in them. See below of the most relevant terms to be included in the eMoF table.
