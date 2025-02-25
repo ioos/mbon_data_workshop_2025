@@ -347,7 +347,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Darwin Core and Extension Schemas</h1>
-        <p>Last updated on 2025-01-07 |
+        <p>Last updated on 2025-02-25 |
 
         <a href="https://github.com/ioos/mbon_data_workshop_2025/edit/main/episodes/04-create-schema.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -799,13 +799,52 @@ vocabulary.</td>
 or ontologies like ENVO or others. When using NERC vocabulary terms, you
 must choose a term from the P01 collection.</td>
 <td>
-<code>http://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/</code><br><code>http://vocab.nerc.ac.uk/collection/P01/current/ODSDM021/</code><br><code>http://vocab.nerc.ac.uk/collection/P01/current/OBSINDLX/</code>
-<br>
-`<code>| |</code>measurementValue<code>| The value of the measurement, fact, characteristic, or assertion |  |</code>20<code>&lt;br/&gt;</code>61.5<code>&lt;br/&gt;</code>121<code>&lt;br/&gt;</code>Van
-Veen
-grab<code>| |</code>measurementValueID<code>| An identifier for facts stored in the column measurementValue (global unique identifier, URI). This identifier can reference a controlled vocabulary (e.g. for sampling instrument names, methodologies, life stages) or reference a methodology paper with a DOI. When the measurementValue refers to a value and not to a fact, the **measurementvalueID has no meaning and should remain empty**. |  |</code><a href="http://vocab.nerc.ac.uk/collection/L22/current/TOOL0653/" class="external-link uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL0653/</a><code>| |</code>measurementAccuracy<code>| The description of the potential error associated with the measurementValue. |  |</code>0.01
-C<code>&lt;br/&gt;</code>0.03<code>&lt;br/&gt;</code>5
-mm<code>| |</code>measurementUnit<code>| The units associated with the measurementValue. Recommended best practice is to use the International System of Units (SI). |  |</code>C<code>&lt;br/&gt;</code>PPT<code>&lt;br/&gt;</code>mm<code>| |</code>measurementUnitID<code>| An identifier for the measurementUnit (global unique identifier, URI). The identifier should reference the measurementUnit in a vocabulary. | Recommended practice is populate this field with a term from NERC vocablary's P06 collection |</code><a href="http://vocab.nerc.ac.uk/collection/P06/current/UPAA/" class="external-link uri">http://vocab.nerc.ac.uk/collection/P06/current/UPAA/</a><code>&lt;br/&gt;</code><a href="http://vocab.nerc.ac.uk/collection/P06/current/UPPT/" class="external-link uri">http://vocab.nerc.ac.uk/collection/P06/current/UPPT/</a><code>&lt;br/&gt;</code><a href="http://vocab.nerc.ac.uk/collection/P06/current/UXMM/" class="external-link uri">http://vocab.nerc.ac.uk/collection/P06/current/UXMM/</a>`</td>
+<code>http://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/</code>
+<br><code>http://vocab.nerc.ac.uk/collection/P01/current/ODSDM021/</code>
+<br><code>http://vocab.nerc.ac.uk/collection/P01/current/OBSINDLX/</code>
+<br></td>
+</tr><tr class="even"><td><code>measurementValue</code></td>
+<td>The value of the measurement, fact, characteristic, or
+assertion</td>
+<td></td>
+<td>
+<code>20</code><br><code>61.5</code><br><code>121</code><br><code>Van Veen grab</code>
+</td>
+</tr><tr class="odd"><td><code>measurementValueID</code></td>
+<td>An identifier for facts stored in the column measurementValue
+(global unique identifier, URI). This identifier can reference a
+controlled vocabulary (e.g. for sampling instrument names,
+methodologies, life stages) or reference a methodology paper with a DOI.
+When the measurementValue refers to a value and not to a fact, the
+<strong>measurementvalueID has no meaning and should remain
+empty</strong>.</td>
+<td></td>
+<td><code>http://vocab.nerc.ac.uk/collection/L22/current/TOOL0653/</code></td>
+</tr><tr class="even"><td><code>measurementAccuracy</code></td>
+<td>The description of the potential error associated with the
+measurementValue.</td>
+<td></td>
+<td>
+<code>0.01 C</code><br><code>0.03</code>
+<br><code>5 mm</code>
+</td>
+</tr><tr class="odd"><td><code>measurementUnit</code></td>
+<td>The units associated with the measurementValue. Recommended best
+practice is to use the International System of Units (SI).</td>
+<td></td>
+<td>
+<code>C</code><br><code>PPT</code><br><code>mm</code>
+</td>
+</tr><tr class="even"><td><code>measurementUnitID</code></td>
+<td>An identifier for the measurementUnit (global unique identifier,
+URI). The identifier should reference the measurementUnit in a
+vocabulary.</td>
+<td>Recommended practice is populate this field with a term from NERC
+vocablary’s P06 collection</td>
+<td>
+<code>http://vocab.nerc.ac.uk/collection/P06/current/UPAA/</code><br><code>http://vocab.nerc.ac.uk/collection/P06/current/UPPT/</code>
+<br><code>http://vocab.nerc.ac.uk/collection/P06/current/UXMM/</code>
+</td>
 </tr></tbody></table></div>
 </div>
 </div>
@@ -877,7 +916,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.11" class="external-link">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.7" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.5" class="external-link">varnish (1.0.5)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.11" class="external-link">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.5" class="external-link">varnish (1.0.5)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -899,8 +938,8 @@ any links that you are not going to use.
   "url": "https://ioos.github.io/mbon_data_workshop_2025/instructor/04-create-schema.html",
   "identifier": "https://ioos.github.io/mbon_data_workshop_2025/instructor/04-create-schema.html",
   "dateCreated": "2025-01-07",
-  "dateModified": "2025-01-07",
-  "datePublished": "2025-02-18"
+  "dateModified": "2025-02-25",
+  "datePublished": "2025-02-25"
 }
 
   </script><script>
