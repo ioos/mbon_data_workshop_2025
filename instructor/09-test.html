@@ -288,7 +288,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#obis-usa-ipt-introduction">OBIS-USA IPT Introduction</a></li>
+        <ul><li><a href="#darwin-core">Darwin Core</a></li>
+<li><a href="#obis-usa-ipt-introduction">OBIS-USA IPT Introduction</a></li>
 <li><a href="#occurrence-core">Occurrence Core</a></li>
 <li><a href="#event-core">Event Core</a></li>
 <li><a href="#extensions">Extensions</a></li>
@@ -401,14 +402,152 @@ files and how to create the files.</li>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="darwin-core">Darwin Core<a class="anchor" aria-label="anchor" href="#darwin-core"></a></h3>
-</div>
-<section><h2 class="section-heading" id="obis-usa-ipt-introduction">OBIS-USA IPT Introduction<a class="anchor" aria-label="anchor" href="#obis-usa-ipt-introduction"></a></h2>
+<section><h2 class="section-heading" id="darwin-core">Darwin Core<a class="anchor" aria-label="anchor" href="#darwin-core"></a></h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="obis-usa-ipt-introduction">OBIS-USA IPT Introduction<a class="anchor" aria-label="anchor" href="#obis-usa-ipt-introduction"></a></h2>
 <hr class="half-width"></section><section><h2 class="section-heading" id="occurrence-core">Occurrence Core<a class="anchor" aria-label="anchor" href="#occurrence-core"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="event-core">Event Core<a class="anchor" aria-label="anchor" href="#event-core"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="extensions">Extensions<a class="anchor" aria-label="anchor" href="#extensions"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="observation-method-specific-recommendations">Observation Method-Specific Recommendations<a class="anchor" aria-label="anchor" href="#observation-method-specific-recommendations"></a></h2>
+<hr class="half-width"><p>When you are doing your mappings to Darwin Core, what terms are
+required? Right now we will focus on those required in the Occurrence
+core.</p>
+<table class="table"><colgroup><col width="14%"><col width="8%"><col width="33%"><col width="30%"><col width="13%"></colgroup><thead><tr class="header"><th>Darwin Core Term</th>
+<th>Role</th>
+<th>Definition</th>
+<th>Comment</th>
+<th>Example</th>
+</tr></thead><tbody><tr class="odd"><td><a href="https://dwc.tdwg.org/terms/#dwc:occurrenceID" class="external-link"><code>occurrenceID</code></a></td>
+<td><strong>required</strong></td>
+<td>An identifier for the Occurrence (as opposed to a particular digital
+record of the occurrence). In the absence of a persistent global unique
+identifier, construct one from a combination of identifiers in the
+record that will most closely make the occurrenceID globally
+unique.</td>
+<td>To construct a globally unique identifier for each occurrence you
+can usually concatenate station + date + scientific name (or something
+similar) but you’ll need to check this is unique for each row in your
+data. It is preferred to use the fields that are least likely to change
+in the future for this. For ways to check the uniqueness of your
+occurrenceIDs see the <a href="../%7B%7B%20page.root%20%7D%7D/06-qa-qc/index.html">QA / QC</a>
+section of the workshop.</td>
+<td>Station_95_Date_09JAN1997:14:35:00.000_Atractosteus_spatula</td>
+</tr><tr class="even"><td><a href="https://dwc.tdwg.org/terms/#dwc:basisOfRecord" class="external-link"><code>basisOfRecord</code></a></td>
+<td><strong>required</strong></td>
+<td>The specific nature of the data record.</td>
+<td>Pick from these controlled vocabulary terms: <a href="http://rs.tdwg.org/dwc/terms/HumanObservation" class="external-link">HumanObservation</a>,
+<a href="http://rs.tdwg.org/dwc/terms/MachineObservation" class="external-link">MachineObservation</a>,
+<a href="http://rs.tdwg.org/dwc/terms/MaterialSample" class="external-link">MaterialSample</a>,
+<a href="http://rs.tdwg.org/dwc/terms/PreservedSpecimen" class="external-link">PreservedSpecimen</a>,
+<a href="http://rs.tdwg.org/dwc/terms/LivingSpecimen" class="external-link">LivingSpecimen</a>,
+<a href="http://rs.tdwg.org/dwc/terms/FossilSpecimen" class="external-link">FossilSpecimen</a>,
+<a href="http://rs.tdwg.org/dwc/terms/MaterialEntity" class="external-link">MaterialEntity</a>,
+<a href="http://rs.tdwg.org/dwc/terms/Event" class="external-link">Event</a>, <a href="http://rs.tdwg.org/dwc/terms/Taxon" class="external-link">Taxon</a>, <a href="http://rs.tdwg.org/dwc/terms/Occurrence" class="external-link">Occurrence</a>, <a href="http://rs.tdwg.org/dwc/terms/MaterialCitation" class="external-link">MaterialCitation</a>
+</td>
+<td>HumanObservation</td>
+</tr><tr class="odd"><td><a href="https://dwc.tdwg.org/terms/#dwc:scientificName" class="external-link"><code>scientificName</code></a></td>
+<td><strong>required</strong></td>
+<td>The full scientific name, with authorship and date information if
+known. When forming part of an Identification, this should be the name
+in lowest level taxonomic rank that can be determined. This term should
+not contain identification qualifications, which should instead be
+supplied in the <code>identificationQualifier</code> term.</td>
+<td>Note that cf., aff., etc. need to be parsed out to the
+<code>identificationQualifier</code> term. For a more thorough review of
+<code>identificationQualifier</code> see <a href="https://doi.org/10.3389/fmars.2021.620702" class="external-link">this paper</a>.</td>
+<td>Atractosteus spatula</td>
+</tr><tr class="even"><td><a href="https://dwc.tdwg.org/terms/#dwc:scientificNameID" class="external-link"><code>scientificNameID</code></a></td>
+<td><strong>required</strong></td>
+<td>An identifier for the nomenclatural (not taxonomic) details of a
+scientific name.</td>
+<td>Must be a WoRMS LSID for sharing to OBIS. Note that the numbers at
+the end are the AphiaID from WoRMS.</td>
+<td><a href="../urn:lsid:marinespecies.org:taxname:218214" class="uri">urn:lsid:marinespecies.org:taxname:218214</a></td>
+</tr><tr class="odd"><td><a href="https://dwc.tdwg.org/terms/#dwc:occurrenceStatus" class="external-link"><code>occurrenceStatus</code></a></td>
+<td><strong>required</strong></td>
+<td>A statement about the presence or absence of a Taxon at a
+Location.</td>
+<td>For OBIS, only valid values are <code>present</code> and
+<code>absent</code>.</td>
+<td>present</td>
+</tr><tr class="even"><td><a href="https://dwc.tdwg.org/terms/#dwc:kingdom" class="external-link"><code>kingdom</code></a></td>
+<td><strong>required</strong></td>
+<td>The full scientific name of the kingdom in which the taxon is
+classified.</td>
+<td>Not required for OBIS but GBIF needs this to disambiguate scientific
+names that are the same but in different kingdoms.</td>
+<td>Animalia</td>
+</tr></tbody></table></section><section><h2 class="section-heading" id="event-core">Event Core<a class="anchor" aria-label="anchor" href="#event-core"></a></h2>
+<hr class="half-width"><p>What terms are required in Event core?</p>
+<table class="table"><colgroup><col width="14%"><col width="8%"><col width="33%"><col width="30%"><col width="13%"></colgroup><thead><tr class="header"><th>Darwin Core Term</th>
+<th>Role</th>
+<th>Definition</th>
+<th>Comment</th>
+<th>Example</th>
+</tr></thead><tbody><tr class="odd"><td><a href="https://dwc.tdwg.org/terms/#dwc:eventID" class="external-link">eventID</a></td>
+<td><strong>required</strong></td>
+<td>An identifier for the set of information associated with an Event
+(something that occurs at a place and time). May be a global unique
+identifier or an identifier specific to the data set.</td>
+<td>
+<code>INBO:VIS:Ev:00009375</code><br><code>Station_95_Date_09JAN1997:14:35:00.000</code>
+<br><code>FFS-216:2007-09-21:A:replicateID1024</code>
+</td>
+<td></td>
+</tr><tr class="even"><td><a href="https://dwc.tdwg.org/terms/#dwc:eventDate" class="external-link"><code>eventDate</code></a></td>
+<td><strong>required</strong></td>
+<td>The date-time or interval during which an Event occurred. For
+occurrences, this is the date-time when the event was recorded. Not
+suitable for a time in a geological context.</td>
+<td>Must follow <a href="https://en.wikipedia.org/wiki/ISO_8601" class="external-link">ISO
+8601</a>. See more information on dates in the <a href="../%7B%7B%20page.root%20%7D%7D/03-data-cleaning/index.html">Data
+Cleaning</a> section of the workshop.</td>
+<td>2009-02-20T08:40Z</td>
+</tr><tr class="odd"><td><a href="https://dwc.tdwg.org/terms/#dwc:decimalLatitude" class="external-link"><code>decimalLatitude</code></a></td>
+<td><strong>required</strong></td>
+<td>The geographic latitude (in decimal degrees, using the spatial
+reference system given in geodeticDatum) of the geographic center of a
+Location. Positive values are north of the Equator, negative values are
+south of it. Legal values lie between -90 and 90, inclusive.</td>
+<td>For OBIS and GBIF the required <code>geodeticDatum</code> is WGS84.
+Uncertainty around the geographic center of a Location (e.g. when
+sampling event was a transect) can be recorded in
+<code>coordinateUncertaintyInMeters</code>. See more information on
+coordinates in the <a href="../%7B%7B%20page.root%20%7D%7D/03-data-cleaning/index.html">Data
+Cleaning</a> section of the workshop.</td>
+<td>-41.0983423</td>
+</tr><tr class="even"><td><a href="https://dwc.tdwg.org/terms/#dwc:decimalLongitude" class="external-link"><code>decimalLongitude</code></a></td>
+<td><strong>required</strong></td>
+<td>The geographic longitude (in decimal degrees, using the spatial
+reference system given in geodeticDatum) of the geographic center of a
+Location. Positive values are east of the Greenwich Meridian, negative
+values are west of it. Legal values lie between -180 and 180,
+inclusive</td>
+<td>For OBIS and GBIF the required <code>geodeticDatum</code> is WGS84.
+See more information on coordinates in the <a href="../%7B%7B%20page.root%20%7D%7D/03-data-cleaning/index.html">Data
+Cleaning</a> section of the workshop.</td>
+<td>-121.1761111</td>
+</tr><tr class="odd"><td><a href="https://dwc.tdwg.org/terms/#dwc:countryCode" class="external-link"><code>countryCode</code></a></td>
+<td><strong>required</strong></td>
+<td>The standard code for the country in which the location occurs.</td>
+<td>Use an <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" class="external-link">ISO
+3166-1-alpha-2</a> country code. Not required for OBIS but GBIF prefers
+to have this for their system. For international waters, leave
+blank.</td>
+<td>US, MX, CA</td>
+</tr><tr class="even"><td><a href="https://dwc.tdwg.org/terms/#dwciri:geodeticDatum" class="external-link"><code>geodeticDatum</code></a></td>
+<td><strong>required</strong></td>
+<td>The ellipsoid, geodetic datum, or spatial reference system (SRS)
+upon which the geographic coordinates given in decimalLatitude and
+decimalLongitude as based.</td>
+<td>Must be <a href="https://epsg.io/4326" class="external-link">WGS84</a> for data shared to
+OBIS and GBIF but it’s best to state explicitly that it is.</td>
+<td>WGS84</td>
+</tr></tbody></table></section><section><h2 class="section-heading" id="extensions">Extensions<a class="anchor" aria-label="anchor" href="#extensions"></a></h2>
+<hr class="half-width"><p>Nothing is required from the OBIS perspective but if you are using
+the Extended Measurement or Fact extension other than eventID, which is
+required to link the extension back to the Event core. You can also use
+occurrenceID to link to occurrence records in the Occurrence core or
+extension. See here for all potential fields in the extension and what
+goes in them. See below of the most relevant terms to be included in the
+eMoF table.</p>
+</section><section><h2 class="section-heading" id="observation-method-specific-recommendations">Observation Method-Specific Recommendations<a class="anchor" aria-label="anchor" href="#observation-method-specific-recommendations"></a></h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="environmental-dna-edna">Environmental DNA (eDNA)<a class="anchor" aria-label="anchor" href="#environmental-dna-edna"></a></h3>
 </div>
