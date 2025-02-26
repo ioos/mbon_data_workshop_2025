@@ -27,7 +27,7 @@ exercises: 90
 ## OBIS-USA IPT Introduction
 
 ## Occurrence Core
-When you are doing your mappings to Darwin Core, what terms are required? Right now we will focus on those required in the Occurrence core.
+When you are doing your mappings to Darwin Core, what terms are required? What other terms might be useful to include? You can find the full list of Darwin Core Occurrence terms on the [Quick Reference Guide](https://dwc.tdwg.org/terms/#occurrence).
 
 | Darwin Core Term | Role | Definition | Comment | Example |
 |------------------|-----------|-------------------------------------------|---------------------------------------|-----------------|
