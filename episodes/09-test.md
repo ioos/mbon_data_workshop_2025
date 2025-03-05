@@ -60,9 +60,37 @@ Nothing is required from the OBIS perspective but if you are using the Extended 
 ## Observation Method-Specific Recommendations
 
 ### Environmental DNA (eDNA)
+#### Key Points
+
+
+#### Resources
+*
+*
+*
 
 ### Passive Acoustic Monitoring
+#### Key Points
+
+
+#### Resources
+*
+*
+*
 
 ### Plankton Imagery
+#### Key Points
+
+
+#### Resources
+*
+*
+*
 
 ### Animal Telemetry
+#### Key Points
+
+
+#### Resources
+*
+*
+*
