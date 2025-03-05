@@ -98,8 +98,7 @@ __All times are in EDT.__
 
 Time |  Activity
 ---|---
-08:30 - 09:00 |  Arrival <br> *Light continental breakfast* <br>
-09:00 - 09:15  |  Introductions to you and your data
+08:30 - 09:15  |  Introductions to you and your data <br> *Light continental breakfast* <br>
 09:15 - 09:30  |  OBIS-USA IPT Introduction
 09:30 - 10:30  |  Occurrence Core Working Session
 10:30 - 10:45  |  Break <br> *Coffee and tea* <br>
