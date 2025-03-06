@@ -68,7 +68,7 @@ Nothing is required from the OBIS perspective but if you are using the Extended 
 * For more detailed information about the DNA-derived Data Extension, see [here](https://ioos.github.io/mbon_data_workshop_2025/edna-extension.html).
 * For more about eDNA metadata, check out the [FAIR eDNA project](https://fair-edna.github.io/index.html).
 
-### Passive Acoustic Monitoring
+### Passive Acoustic Monitoring (PAM)
 #### Key Points
 
 
