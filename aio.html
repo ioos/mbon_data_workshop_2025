@@ -3267,7 +3267,7 @@ notebook</a> to see how it works.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Hmisc::describe </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3467,7 +3467,7 @@ checks:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
@@ -4779,13 +4779,219 @@ OBIS and GBIF but it’s best to state explicitly that it is.</td>
 </section><section><h2 class="section-heading" id="extensions">Extensions<a class="anchor" aria-label="anchor" href="#extensions"></a>
 </h2>
 <hr class="half-width">
-<p>Nothing is required from the OBIS perspective but if you are using
-the Extended Measurement or Fact extension other than eventID, which is
-required to link the extension back to the Event core. You can also use
-occurrenceID to link to occurrence records in the Occurrence core or
-extension. See here for all potential fields in the extension and what
-goes in them. See below of the most relevant terms to be included in the
-eMoF table.</p>
+<div class="section level3">
+<h3 id="extended-measurement-or-fact-extension-emof">Extended Measurement or Fact Extension (eMoF)<a class="anchor" aria-label="anchor" href="#extended-measurement-or-fact-extension-emof"></a>
+</h3>
+<p>As we have indicated earlier, the Event core is for datasets that
+include known sampling events - details are known about how, when, and
+where samples were taken.</p>
+<p>An innovation that OBIS made was introducing the Extended Measurement
+or Fact extension (also sometimes referred to as OBIS-ENV-DATA, or
+eMoF). This uses the Event core with an Occurrence extension + the <a href="https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml" class="external-link">extended
+Measurement or Fact extension</a>. The eMoF extension makes it possible
+to include measurements for <strong>both</strong> the events (salinity,
+temperature, gear type, etc.) and the occurrences (weight, length,
+etc.). Prior to this you were only able to include measurements of the
+occurrence (in the Measurement or Facts extension).</p>
+<p>It is important to know that the structure of the eMoF table is
+likely quite a bit different than how the original data are recorded in
+your dataset. Rather than documenting each measurement in separate
+columns, measurements will be condensed into one column:
+<code>measurementValue</code> (e.g. 15). Then, the column
+<code>measurementType</code> allows free text describing what the
+measurement actually is (e.g. length). Finally the column
+<code>measurementUnit</code> is used to indicate the unit of the
+measurement (e.g. cm).</p>
+<p>The unconstrained nature of <code>measurementType</code> allows for
+flexibility in describing measurements, which can be quite a useful. But
+what if you wanted to obtain all OBIS records that have “length”
+measurements? Due to the inevitable heterogeneity in how different
+people document “length”, you would have to try to account for all these
+different ways! Fortunately the eMoF table can get around this challenge
+by providing a way to include Unique Resource Identifiers (URIs). These
+URIs are used to populate the <code>measurementTypeID</code> field, as
+well as <code>measurementUnitID</code> and
+<code>measurementValueID</code>. URIs mean that if you call the
+<code>measurementType</code> “abundance” but I call it “Abundance per
+square meter” and we both use the <code>measurementTypeID</code> “<a href="http://vocab.nerc.ac.uk/collection/P01/current/SDBIOL02/" class="external-link uri">http://vocab.nerc.ac.uk/collection/P01/current/SDBIOL02/</a>”
+then we know this is the same measurement type even if we didn’t use the
+same words to describe it. Choosing the right URI can be difficult but
+you can read about finding codes in <a href="https://manual.obis.org/vocabulary.html#map-emof-measurement-identifiers-to-preferred-bodc-vocabulary" class="external-link">the
+OBIS Manual</a>. All you need to know for now is that
+<code>measurementTypeID</code> should be populated with a URI belonging
+to the NERC P01 collection, easily accessible through the <a href="https://vocab.seadatanet.org/p01-facet-search" class="external-link">SeaDataNet P01
+facet search</a>, and <code>measurementUnitID</code> should be popualted
+with a <a href="https://vocab.nerc.ac.uk/search_nvs/P06/?searchstr=&amp;options=identifier,preflabel,altlabel,status_accepted&amp;rbaddfilter=inc&amp;searchstr2=" class="external-link">NERC
+P06 code</a>. OBIS is soon releasing video tutorials to help with
+choosing URIs, so stay tuned to their <a href="https://manual.obis.org/" class="external-link">manual</a> and <a href="https://www.youtube.com/@oceanbiodiversityinformati6931/playlists" class="external-link">YouTube
+list</a> for updates.</p>
+<div id="tip" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="tip" class="callout-inner">
+<h3 class="callout-title">
+<span class="emoji" data-emoji="pushpin">📌</span> Tip</h3>
+<div class="callout-content">
+<p>You can search for <code>measurementTypes</code> that other OBIS data
+providers have used by using the <a href="https://mof.obis.org/" class="external-link">OBIS
+mof report</a>. BE CAREFUL though to make sure the definition in the URI
+matches exactly your measurement type if you want to reuse it for your
+data.</p>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Extended Measurement or Fact Extension </h3>
+</button>
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div class="accordion-body">
+<p>Nothing is <em>required</em> from the OBIS perspective but if you are
+using this extension then <code>eventID</code> is required to be able to
+link the extension back to the Event core. You can also use
+<code>occurrenceID</code> to link to occurrence records in the
+Occurrence core or extension. See <a href="https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml" class="external-link">here</a>
+for all potential fields in the extension and what goes in them. See
+below of the most relevant terms to be included in the eMoF table.</p>
+<table class="table">
+<colgroup>
+<col width="16%">
+<col width="32%">
+<col width="35%">
+<col width="15%">
+</colgroup>
+<thead><tr class="header">
+<th>Darwin Core Term</th>
+<th>Definition</th>
+<th>Comment</th>
+<th>Example</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>eventID</code></td>
+<td>An identifier for the set of information associated with an Event
+(something that occurs at a place and time). May be a global unique
+identifier or an identifier specific to the data set.</td>
+<td>This will be constructed in the Event core but you need to reference
+it here in the extension so the files can link to each other
+correctly.</td>
+<td>
+<code>INBO:VIS:Ev:00009375</code><br><code>Station_95_Date_09JAN1997:14:35:00.000</code>
+<br><code>FFS-216:2007-09-21:A:replicateID1024</code>
+</td>
+</tr>
+<tr class="even">
+<td><code>occurrenceID</code></td>
+<td>The identifier of the occurrence the measurement or fact refers to.
+If not applicable, it should be left empty.</td>
+<td>Only needed if you have measurements that you need to link back to
+an occurrence like weight, length, abundance, etc.</td>
+<td>
+<code>urn:catalog:UWBM:Bird:89776</code> <br><code>Station_95_Date_09JAN1997:14:35:00.000_Atractosteus_spatula</code>
+<br><code>FFS-216:2007-09-21:A:replicateID1024:objectID1345330</code>
+</td>
+</tr>
+<tr class="odd">
+<td><code>measurementID</code></td>
+<td>An identifier for the MeasurementOrFact (information pertaining to
+measurements, facts, characteristics, or assertions). May be a global
+unique identifier or an identifier specific to the data set.</td>
+<td>This is not necessarily required when creating the eMoF but it can
+be useful, especially if you would like a way to identify a specific
+measurement in the data</td>
+<td><code>9c752d22-b09a-11e8-96f8-529269fb1459</code></td>
+</tr>
+<tr class="even">
+<td><code>measurementType</code></td>
+<td>The nature of the measurement, fact, characteristic, or assertion.
+Recommended best practice is to use a controlled vocabulary.</td>
+<td></td>
+<td>
+<code>temperature</code><br><code>salinity</code><br><code>length</code><br><code>device type</code>
+</td>
+</tr>
+<tr class="odd">
+<td><code>measurementTypeID</code></td>
+<td>An identifier for the measurementType (global unique identifier,
+URI). The identifier should reference the measurementType in a
+vocabulary.</td>
+<td>OBIS uses NERC to provide these but you can use other vocabularies
+or ontologies like ENVO or others. When using NERC vocabulary terms, you
+must choose a term from the P01 collection.</td>
+<td>
+<code>http://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/</code>
+<br><code>http://vocab.nerc.ac.uk/collection/P01/current/ODSDM021/</code>
+<br><code>http://vocab.nerc.ac.uk/collection/P01/current/OBSINDLX/</code>
+<br>
+</td>
+</tr>
+<tr class="even">
+<td><code>measurementValue</code></td>
+<td>The value of the measurement, fact, characteristic, or
+assertion</td>
+<td></td>
+<td>
+<code>20</code><br><code>61.5</code><br><code>121</code><br><code>Van Veen grab</code>
+</td>
+</tr>
+<tr class="odd">
+<td><code>measurementValueID</code></td>
+<td>An identifier for facts stored in the column measurementValue
+(global unique identifier, URI). This identifier can reference a
+controlled vocabulary (e.g. for sampling instrument names,
+methodologies, life stages) or reference a methodology paper with a DOI.
+When the measurementValue refers to a value and not to a fact, the
+<strong>measurementvalueID has no meaning and should remain
+empty</strong>.</td>
+<td></td>
+<td><code>http://vocab.nerc.ac.uk/collection/L22/current/TOOL0653/</code></td>
+</tr>
+<tr class="even">
+<td><code>measurementAccuracy</code></td>
+<td>The description of the potential error associated with the
+measurementValue.</td>
+<td></td>
+<td>
+<code>0.01 C</code><br><code>0.03</code>
+<br><code>5 mm</code>
+</td>
+</tr>
+<tr class="odd">
+<td><code>measurementUnit</code></td>
+<td>The units associated with the measurementValue. Recommended best
+practice is to use the International System of Units (SI).</td>
+<td></td>
+<td>
+<code>C</code><br><code>PPT</code><br><code>mm</code>
+</td>
+</tr>
+<tr class="even">
+<td><code>measurementUnitID</code></td>
+<td>An identifier for the measurementUnit (global unique identifier,
+URI). The identifier should reference the measurementUnit in a
+vocabulary.</td>
+<td>Recommended practice is populate this field with a term from NERC
+vocablary’s P06 collection</td>
+<td>
+<code>http://vocab.nerc.ac.uk/collection/P06/current/UPAA/</code><br><code>http://vocab.nerc.ac.uk/collection/P06/current/UPPT/</code>
+<br><code>http://vocab.nerc.ac.uk/collection/P06/current/UXMM/</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>In the <a href="https://github.com/ioos/bio_data_guide" class="external-link">IOOS Bio Data
+Guide repository</a>, you can see <a href="https://github.com/ioos/bio_data_guide/blob/main/datasets/TPWD_HARC_BagSeine/TPWD_HARC_BagSeine_OBISENV.md" class="external-link">a
+script</a> used to take data in its original form and align it to Darwin
+Core Event Core with Extended Measurement or Fact. More information on
+how to organize data fields into Event and Measurement or Fact can be
+found in the <a href="https://manual.obis.org/" class="external-link">OBIS Manual</a>.</p>
+</div>
 </section><section><h2 class="section-heading" id="observation-method-specific-recommendations">Observation Method-Specific Recommendations<a class="anchor" aria-label="anchor" href="#observation-method-specific-recommendations"></a>
 </h2>
 <hr class="half-width">
