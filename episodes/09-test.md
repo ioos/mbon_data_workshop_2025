@@ -23,6 +23,11 @@ exercises: 90
 ::::::::::::::::::::::
 
 ## Darwin Core
+[Darwin Core](https://www.tdwg.org/standards/dwc/) (DwC) is an international standard maintained by the Biodiversity Information Standards (or [TDWG](https://www.tdwg.org/)) association. Darwin Core consists of a glossary of terms that facilitate the sharing of information about biological occurrences as documented by observations, specimens, samples, and other evidence. To see a full list of Darwin Core terms, please see the [Quick Reference Guide](https://dwc.tdwg.org/terms/).
+
+As members of the ocean observing community, it is important for us to share our data in the Darwin Core format so it can be easily aggregated and analyzed with other biological occurrences that have been published to databases like the [Ocean Biodiversity Information System](https://obis.org/) (OBIS; containing over 136 million records at the time of this workshop) and the [Global Biodiversity Information Facility](https://www.gbif.org/) (GBIF; containing over 3 billion records at the time of this workshop). By adding our data to these systems, we can enhance what is known about marine life in U.S. waters and globally, and help fill data gaps where other observations may not exist.
+
+Observations of marine life can be translated into Darwin Core and shared regardless of the observing method. At the end of the day, biological occurrences are data about an organism at a time in a place. That is the essence of what we want to capture with Darwin Core. Any additional information you can provide on top of that (environmental variables at the time of the observation, data about how the occurrence was determined, etc.) is icing on the cake.
 
 ## OBIS-USA IPT Introduction
 
@@ -64,8 +69,8 @@ Nothing is required from the OBIS perspective but if you are using the Extended 
 
 
 #### Resources
-*
-*
+* For more detailed information about the DNA-derived Data Extension, see [here](https://ioos.github.io/mbon_data_workshop_2025/edna-extension.html).
+* For more about eDNA metadata, check out the [FAIR eDNA project](https://fair-edna.github.io/index.html).
 *
 
 ### Passive Acoustic Monitoring
@@ -73,7 +78,7 @@ Nothing is required from the OBIS perspective but if you are using the Extended 
 
 
 #### Resources
-*
+* To see how the SanctSound project processes their PAM data and distills it into DwC, see [here](https://github.com/ioos/bio_data_guide/blob/main/datasets/SanctSound/README.md).
 *
 *
 
@@ -91,6 +96,6 @@ Nothing is required from the OBIS perspective but if you are using the Extended 
 
 
 #### Resources
-*
+* For more detailed information about how to translate acoustic and satellite telemetry into DwC, see [here](https://ioos.github.io/mbon_data_workshop_2025/acoustic-telemetry.html).
 *
 *
