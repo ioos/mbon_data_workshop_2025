@@ -5,7 +5,6 @@ site: sandpaper::sandpaper_site
 
 **Coordinators:** 
 Casey Godwin, 
-Connie Kot, 
 Felimon Gayanilo,
 Katherine Silliman, 
 Kathleen Pitz,
@@ -13,7 +12,6 @@ Laura Brenskelle,
 Luke Thompson,
 Mathew Biddle, 
 Ana Peralta Brichtova, 
-Stephen Formel,
 Frank Muller-Karger,
 Daniel Otis,
 Tylar Murray,
