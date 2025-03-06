@@ -1071,7 +1071,7 @@ represented dates to ISO-8601.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
@@ -1709,7 +1709,7 @@ names to WoRMS.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
@@ -2062,7 +2062,7 @@ coordinate pairs.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
@@ -2800,7 +2800,7 @@ identifiers. Image credit: <a href="https://manual.obis.org/" class="external-li
   Event Core
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <table class="table">
 <colgroup>
@@ -2897,7 +2897,7 @@ OBIS and GBIF but it’s best to state explicitly that it is.</td>
   Occurrence extension
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <table class="table">
 <colgroup>
@@ -3001,7 +3001,7 @@ Location.</td>
   Extended Measurement or Fact Extension
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <p>Nothing is <em>required</em> from the OBIS perspective but if you are
 using this extension then <code>eventID</code> is required to be able to
@@ -3267,7 +3267,7 @@ notebook</a> to see how it works.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Hmisc::describe </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3467,7 +3467,7 @@ checks:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
@@ -4369,7 +4369,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-09-test"><p>Content from <a href="09-test.html">MBON Workshop Test</a></p>
 <hr>
-<p>Last updated on 2025-03-05 |
+<p>Last updated on 2025-03-06 |
 
         <a href="https://github.com/ioos/mbon_data_workshop_2025/edit/main/episodes/09-test.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -4411,7 +4411,32 @@ files and how to create the files.</li>
 </div>
 <section><h2 class="section-heading" id="darwin-core">Darwin Core<a class="anchor" aria-label="anchor" href="#darwin-core"></a>
 </h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="obis-usa-ipt-introduction">OBIS-USA IPT Introduction<a class="anchor" aria-label="anchor" href="#obis-usa-ipt-introduction"></a>
+<hr class="half-width">
+<p><a href="https://www.tdwg.org/standards/dwc/" class="external-link">Darwin Core</a> (DwC)
+is an international standard maintained by the Biodiversity Information
+Standards (or <a href="https://www.tdwg.org/" class="external-link">TDWG</a>) association.
+Darwin Core consists of a glossary of terms that facilitate the sharing
+of information about biological occurrences as documented by
+observations, specimens, samples, and other evidence. To see a full list
+of Darwin Core terms, please see the <a href="https://dwc.tdwg.org/terms/" class="external-link">Quick Reference Guide</a>.</p>
+<p>As members of the ocean observing community, it is important for us
+to share our data in the Darwin Core format so it can be easily
+aggregated and analyzed with other biological occurrences that have been
+published to databases like the <a href="https://obis.org/" class="external-link">Ocean
+Biodiversity Information System</a> (OBIS; containing over 136 million
+records at the time of this workshop) and the <a href="https://www.gbif.org/" class="external-link">Global Biodiversity Information
+Facility</a> (GBIF; containing over 3 billion records at the time of
+this workshop). By adding our data to these systems, we can enhance what
+is known about marine life in U.S. waters and globally, and help fill
+data gaps where other observations may not exist.</p>
+<p>Observations of marine life can be translated into Darwin Core and
+shared regardless of the observing method. At the end of the day,
+biological occurrences are data about an organism at a time in a place.
+That is the essence of what we want to capture with Darwin Core. Any
+additional information you can provide on top of that (environmental
+variables at the time of the observation, data about how the occurrence
+was determined, etc.) is icing on the cake.</p>
+</section><section><h2 class="section-heading" id="obis-usa-ipt-introduction">OBIS-USA IPT Introduction<a class="anchor" aria-label="anchor" href="#obis-usa-ipt-introduction"></a>
 </h2>
 <hr class="half-width"></section><section><h2 class="section-heading" id="occurrence-core">Occurrence Core<a class="anchor" aria-label="anchor" href="#occurrence-core"></a>
 </h2>
@@ -4637,10 +4662,10 @@ eMoF table.</p>
 <h4 id="resources">Resources<a class="anchor" aria-label="anchor" href="#resources"></a>
 </h4>
 <ul>
-<li>
-</li>
-<li>
-</li>
+<li>For more detailed information about the DNA-derived Data Extension,
+see <a href="https://ioos.github.io/mbon_data_workshop_2025/edna-extension.html" class="external-link">here</a>.</li>
+<li>For more about eDNA metadata, check out the <a href="https://fair-edna.github.io/index.html" class="external-link">FAIR eDNA
+project</a>.</li>
 <li>
 </li>
 </ul>
@@ -4657,8 +4682,8 @@ eMoF table.</p>
 <h4 id="resources-1">Resources<a class="anchor" aria-label="anchor" href="#resources-1"></a>
 </h4>
 <ul>
-<li>
-</li>
+<li>To see how the SanctSound project processes their PAM data and
+distills it into DwC, see <a href="https://github.com/ioos/bio_data_guide/blob/main/datasets/SanctSound/README.md" class="external-link">here</a>.</li>
 <li>
 </li>
 <li>
@@ -4697,8 +4722,8 @@ eMoF table.</p>
 <h4 id="resources-3">Resources<a class="anchor" aria-label="anchor" href="#resources-3"></a>
 </h4>
 <ul>
-<li>
-</li>
+<li>For more detailed information about how to translate acoustic and
+satellite telemetry into DwC, see <a href="https://ioos.github.io/mbon_data_workshop_2025/acoustic-telemetry.html" class="external-link">here</a>.</li>
 <li>
 </li>
 <li>
@@ -4758,8 +4783,8 @@ any links that you are not going to use.
   "url": "https://ioos.github.io/mbon_data_workshop_2025/aio.html",
   "identifier": "https://ioos.github.io/mbon_data_workshop_2025/aio.html",
   "dateCreated": "2025-01-07",
-  "dateModified": "2025-03-05",
-  "datePublished": "2025-03-05"
+  "dateModified": "2025-03-06",
+  "datePublished": "2025-03-06"
 }
 
   </script><script>
