@@ -32,7 +32,7 @@ Observations of marine life can be translated into Darwin Core and shared regard
 As members of the ocean observing community, it is important for us to share our data in the Darwin Core format so it can be easily aggregated and analyzed with other biological occurrences that have been published to databases like the [Ocean Biodiversity Information System](https://obis.org/) (OBIS; containing over 136 million records at the time of this workshop) and the [Global Biodiversity Information Facility](https://www.gbif.org/) (GBIF; containing over 3 billion records at the time of this workshop). By adding our data to these systems, we can enhance what is known about marine life in U.S. waters and globally, and help fill data gaps where other observations may not exist.
 
 #### Darwin Core Archives
-Darwin Core Archives are what OBIS and GBIF harvest into their systems. Fortunately, the software created and maintained by GBIF, the [Integrated Publishing Toolkit](https://www.gbif.org/ipt) (IPT), produces Darwin Core Archives for us. Darwin Core Archives are pretty simple. It's a zipped folder containing the data (one or several files depending on how many extensions you use), an Ecological Metadata Language (EML) XML file, and a meta.xml file that describes what's in the zipped folder.
+A Darwin Core Archive is a zipped folder containing Darwin Core-formatted data (one or several files depending on how many extensions you use), an Ecological Metadata Language (EML) XML file, and a meta.xml file that describes what's in the zipped folder. Darwin Core Archives are what OBIS and GBIF harvest into their systems. Fortunately, the software created and maintained by GBIF, the [Integrated Publishing Toolkit](https://www.gbif.org/ipt) (IPT), produces Darwin Core Archives for us. We will be learning more about the IPT in the [next section](#obis-usa-ipt-introduction). 
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -64,7 +64,6 @@ dwca-tpwd_harc_texasaransasbay_bagseine-v2.3
 - To see a full list of Darwin Core terms, see the [Quick Reference Guide](https://dwc.tdwg.org/terms/).
 
 :::::::::::::::::::::::
-
 
 ## OBIS-USA IPT Introduction
 
