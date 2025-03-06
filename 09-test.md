@@ -29,6 +29,15 @@ As members of the ocean observing community, it is important for us to share our
 
 Observations of marine life can be translated into Darwin Core and shared regardless of the observing method. At the end of the day, biological occurrences are data about an organism at a time in a place. That is the essence of what we want to capture with Darwin Core. Any additional information you can provide on top of that (environmental variables at the time of the observation, data about how the occurrence was determined, etc.) is icing on the cake.
 
+::::::::::::: keypoints
+
+- Biological occurrences can be shared to Darwin Core no matter what observing or sampling method was used.
+- The essence of the information we want to capture in Darwin Core is **what** organism was observed, **when**, and **where**.
+- To see a full list of Darwin Core terms, see the [Quick Reference Guide](https://dwc.tdwg.org/terms/).
+
+:::::::::::::::::::::::
+
+
 ## OBIS-USA IPT Introduction
 
 ## Occurrence Core
