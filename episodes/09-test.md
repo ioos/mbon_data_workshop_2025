@@ -71,7 +71,6 @@ Nothing is required from the OBIS perspective but if you are using the Extended 
 #### Resources
 * For more detailed information about the DNA-derived Data Extension, see [here](https://ioos.github.io/mbon_data_workshop_2025/edna-extension.html).
 * For more about eDNA metadata, check out the [FAIR eDNA project](https://fair-edna.github.io/index.html).
-*
 
 ### Passive Acoustic Monitoring
 #### Key Points
@@ -79,8 +78,6 @@ Nothing is required from the OBIS perspective but if you are using the Extended 
 
 #### Resources
 * To see how the SanctSound project processes their PAM data and distills it into DwC, see [here](https://github.com/ioos/bio_data_guide/blob/main/datasets/SanctSound/README.md).
-*
-*
 
 ### Plankton Imagery
 #### Key Points
@@ -97,5 +94,3 @@ Nothing is required from the OBIS perspective but if you are using the Extended 
 
 #### Resources
 * For more detailed information about how to translate acoustic and satellite telemetry into DwC, see [here](https://ioos.github.io/mbon_data_workshop_2025/acoustic-telemetry.html).
-*
-*
