@@ -186,7 +186,7 @@ definition in the URI matches exactly your measurement type if you want to reuse
 
 :::::::::::: spoiler
 
-## Extended Measurement or Fact Extension
+## Extended Measurement or Fact Extension Terms
 
 Nothing is *required* from the OBIS perspective but if you are using this extension then `eventID` is required to be 
 able to link the extension back to the Event core. You can also use `occurrenceID` to link to occurrence records in 
