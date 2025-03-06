@@ -139,7 +139,77 @@ and [YouTube list](https://www.youtube.com/@oceanbiodiversityinformati6931/playl
 ::::::::::::::::::::
 
 ## Extensions
-Nothing is required from the OBIS perspective but if you are using the Extended Measurement or Fact extension other than eventID, which is required to link the extension back to the Event core. You can also use occurrenceID to link to occurrence records in the Occurrence core or extension. See here for all potential fields in the extension and what goes in them. See below of the most relevant terms to be included in the eMoF table.
+
+### Extended Measurement or Fact Extension (eMoF)
+As we have indicated earlier, the Event core is for datasets that include known sampling events - details are known 
+about how, when, and where samples were taken.
+
+An innovation that OBIS made was introducing the Extended Measurement or Fact extension (also sometimes referred to as 
+OBIS-ENV-DATA, or eMoF). This uses the Event core with an Occurrence extension + the 
+[extended Measurement or Fact extension](https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml). The eMoF 
+extension makes it possible to include measurements for **both** the events (salinity, temperature, gear type, etc.) and 
+the occurrences (weight, length, etc.). Prior to this you were only able to include measurements of the occurrence (in 
+the Measurement or Facts extension).
+
+It is important to know that the structure of the eMoF table is likely quite a bit different than how the original data 
+are recorded in your dataset. Rather than documenting each measurement in separate columns, measurements will be 
+condensed into one column: `measurementValue` (e.g. 15). Then, the column `measurementType`  allows free text 
+describing what the measurement actually is (e.g. length). Finally the column `measurementUnit` is used to indicate the 
+unit of the measurement (e.g. cm).
+
+The unconstrained nature of `measurementType` allows for flexibility in describing measurements, which can be quite a 
+useful. But what if you wanted to obtain all OBIS records that have "length" measurements? Due to the inevitable 
+heterogeneity in how different people document "length", you would have to try to account for all these different ways! 
+Fortunately the eMoF table can get around this challenge by providing a way to include Unique Resource Identifiers 
+(URIs). These URIs are used to populate the `measurementTypeID` field, as well as `measurementUnitID` and 
+`measurementValueID`. URIs mean that if you call the `measurementType` "abundance" but I call it "Abundance per square 
+meter" and we both use the `measurementTypeID` "http://vocab.nerc.ac.uk/collection/P01/current/SDBIOL02/" then we know 
+this is the same measurement type even if we didn't use the same words to describe it. Choosing the right URI can be 
+difficult but you can read about finding codes in 
+[the OBIS Manual](https://manual.obis.org/vocabulary.html#map-emof-measurement-identifiers-to-preferred-bodc-vocabulary). 
+All you need to know for now is that `measurementTypeID` should be populated with a URI belonging to the NERC P01 
+collection, easily accessible through the [SeaDataNet P01 facet search](https://vocab.seadatanet.org/p01-facet-search), 
+and `measurementUnitID` should be popualted with a 
+[NERC P06 code](https://vocab.nerc.ac.uk/search_nvs/P06/?searchstr=&options=identifier,preflabel,altlabel,status_accepted&rbaddfilter=inc&searchstr2=). 
+OBIS is soon releasing video tutorials to help with choosing URIs, so stay tuned to their [manual](https://manual.obis.org/) 
+and [YouTube list](https://www.youtube.com/@oceanbiodiversityinformati6931/playlists) for updates.
+
+:::::::::::: callout
+
+## :pushpin: Tip 
+
+You can search for `measurementTypes` that other OBIS data providers have used by using the 
+[OBIS mof report](https://mof.obis.org/). BE CAREFUL though to make sure the
+definition in the URI matches exactly your measurement type if you want to reuse it for your data.
+
+::::::::::::::::::::
+
+:::::::::::: spoiler
+
+## Extended Measurement or Fact Extension
+
+Nothing is *required* from the OBIS perspective but if you are using this extension then `eventID` is required to be 
+able to link the extension back to the Event core. You can also use `occurrenceID` to link to occurrence records in 
+the Occurrence core or extension. See [here](https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml) for 
+all potential fields in the extension and what goes in them. See below of the most relevant terms to be included in the 
+eMoF table.
+ 
+| Darwin Core Term | Definition | Comment | Example |
+|------------------|------------------------------------|---------------------------------------|-----------------|
+| `eventID` | An identifier for the set of information associated with an Event (something that occurs at a place and time). May be a global unique identifier or an identifier specific to the data set.| This will be constructed in the Event core but you need to reference it here in the extension so the files can link to each other correctly. | `INBO:VIS:Ev:00009375`<br/>`Station_95_Date_09JAN1997:14:35:00.000` <br/> `FFS-216:2007-09-21:A:replicateID1024`|
+| `occurrenceID` | The identifier of the occurrence the measurement or fact refers to. If not applicable, it should be left empty. | Only needed if you have measurements that you need to link back to an occurrence like weight, length, abundance, etc. | `urn:catalog:UWBM:Bird:89776` <br/> `Station_95_Date_09JAN1997:14:35:00.000_Atractosteus_spatula` <br/> `FFS-216:2007-09-21:A:replicateID1024:objectID1345330` |
+| `measurementID` | An identifier for the MeasurementOrFact (information pertaining to measurements, facts, characteristics, or assertions). May be a global unique identifier or an identifier specific to the data set. | This is not necessarily required when creating the eMoF but it can be useful, especially if you would like a way to identify a specific measurement in the data | `9c752d22-b09a-11e8-96f8-529269fb1459` |
+| `measurementType` | The nature of the measurement, fact, characteristic, or assertion. Recommended best practice is to use a controlled vocabulary. |  | `temperature`<br/> `salinity`<br/> `length`<br/> `device type`|
+| `measurementTypeID` | An identifier for the measurementType (global unique identifier, URI). The identifier should reference the measurementType in a vocabulary. | OBIS uses NERC to provide these but you can use other vocabularies or ontologies like ENVO or others. When using NERC vocabulary terms, you must choose a term from the P01 collection. | `http://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01/` <br/> `http://vocab.nerc.ac.uk/collection/P01/current/ODSDM021/	` <br/> `http://vocab.nerc.ac.uk/collection/P01/current/OBSINDLX/` <br/> |
+| `measurementValue` | The value of the measurement, fact, characteristic, or assertion |  | `20`<br/> `61.5`<br/> `121`<br/> `Van Veen grab` |
+| `measurementValueID` | An identifier for facts stored in the column measurementValue (global unique identifier, URI). This identifier can reference a controlled vocabulary (e.g. for sampling instrument names, methodologies, life stages) or reference a methodology paper with a DOI. When the measurementValue refers to a value and not to a fact, the **measurementvalueID has no meaning and should remain empty**. |  | `http://vocab.nerc.ac.uk/collection/L22/current/TOOL0653/`|
+| `measurementAccuracy` | The description of the potential error associated with the measurementValue. |  | `0.01 C`<br/>`0.03` <br/>`5 mm`|
+| `measurementUnit` | The units associated with the measurementValue. Recommended best practice is to use the International System of Units (SI). |  | `C`<br/> `PPT`<br/> `mm` |
+| `measurementUnitID` | An identifier for the measurementUnit (global unique identifier, URI). The identifier should reference the measurementUnit in a vocabulary. | Recommended practice is populate this field with a term from NERC vocablary's P06 collection | `http://vocab.nerc.ac.uk/collection/P06/current/UPAA/`<br/>`http://vocab.nerc.ac.uk/collection/P06/current/UPPT/` <br/>`http://vocab.nerc.ac.uk/collection/P06/current/UXMM/` |
+
+::::::::::::::::::::
+
+In the [IOOS Bio Data Guide repository](https://github.com/ioos/bio_data_guide), you can see [a script](https://github.com/ioos/bio_data_guide/blob/main/datasets/TPWD_HARC_BagSeine/TPWD_HARC_BagSeine_OBISENV.md) used to take data in its original form and align it to Darwin Core Event Core with Extended Measurement or Fact. More information on how to organize data fields into Event and Measurement or Fact can be found in the [OBIS Manual](https://manual.obis.org/).
 
 ## Observation Method-Specific Recommendations
 
