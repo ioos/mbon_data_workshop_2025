@@ -23,11 +23,39 @@ exercises: 90
 ::::::::::::::::::::::
 
 ## Darwin Core
-[Darwin Core](https://www.tdwg.org/standards/dwc/) (DwC) is an international standard maintained by the Biodiversity Information Standards (or [TDWG](https://www.tdwg.org/)) association. Darwin Core consists of a glossary of terms that facilitate the sharing of information about biological occurrences as documented by observations, specimens, samples, and other evidence. To see a full list of Darwin Core terms, please see the [Quick Reference Guide](https://dwc.tdwg.org/terms/).
-
-As members of the ocean observing community, it is important for us to share our data in the Darwin Core format so it can be easily aggregated and analyzed with other biological occurrences that have been published to databases like the [Ocean Biodiversity Information System](https://obis.org/) (OBIS; containing over 136 million records at the time of this workshop) and the [Global Biodiversity Information Facility](https://www.gbif.org/) (GBIF; containing over 3 billion records at the time of this workshop). By adding our data to these systems, we can enhance what is known about marine life in U.S. waters and globally, and help fill data gaps where other observations may not exist.
+[Darwin Core](https://www.tdwg.org/standards/dwc/) (DwC) is an international standard maintained by the Biodiversity Information Standards (or [TDWG](https://www.tdwg.org/)) association. Darwin Core consists of a glossary of terms that facilitate the sharing of information about biological occurrences as documented by observations, specimens, samples, and other evidence. To see a full list of Darwin Core terms, please see the [Quick Reference Guide](https://dwc.tdwg.org/terms/). To learn more about the foundations of Darwin Core, read 
+[Wieczorek et al., 2012](https://doi.org/10.1371/journal.pone.0029715).
 
 Observations of marine life can be translated into Darwin Core and shared regardless of the observing method. At the end of the day, biological occurrences are data about an organism at a time in a place. That is the essence of what we want to capture with Darwin Core. Any additional information you can provide on top of that (environmental variables at the time of the observation, data about how the occurrence was determined, etc.) is icing on the cake.
+
+#### Demonstrated Use of Darwin Core
+As members of the ocean observing community, it is important for us to share our data in the Darwin Core format so it can be easily aggregated and analyzed with other biological occurrences that have been published to databases like the [Ocean Biodiversity Information System](https://obis.org/) (OBIS; containing over 136 million records at the time of this workshop) and the [Global Biodiversity Information Facility](https://www.gbif.org/) (GBIF; containing over 3 billion records at the time of this workshop). By adding our data to these systems, we can enhance what is known about marine life in U.S. waters and globally, and help fill data gaps where other observations may not exist.
+
+#### Darwin Core Archives
+Darwin Core Archives are what OBIS and GBIF harvest into their systems. Fortunately, the software created and maintained by GBIF, the [Integrated Publishing Toolkit](https://www.gbif.org/ipt) (IPT), produces Darwin Core Archives for us. Darwin Core Archives are pretty simple. It's a zipped folder containing the data (one or several files depending on how many extensions you use), an Ecological Metadata Language (EML) XML file, and a meta.xml file that describes what's in the zipped folder.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+### Challenge
+
+Download this [Darwin Core Archive](https://ipt-obis.gbif.us/archive.do?r=tpwd_harc_texasaransasbay_bagseine&v=2.3) and 
+examine what's in it. Did you find anything unusual or that you don't understand what it is?
+
+:::::::::::::::::::::::: solution 
+
+### Solution
+
+```Folder
+dwca-tpwd_harc_texasaransasbay_bagseine-v2.3
+ |-- eml.xml
+ |-- event.txt
+ |-- extendedmeasurementorfact.txt
+ |-- meta.xml
+ `-- occurrence.txt
+```
+::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
 
 ::::::::::::: keypoints
 
