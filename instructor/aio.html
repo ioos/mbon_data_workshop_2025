@@ -1091,7 +1091,7 @@ represented dates to ISO-8601.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <p>When dealing with dates using pandas in Python it is best to create a
 Series as your time column with the appropriate datatype. Then, when
 writing your file(s) using <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html" class="external-link">.to_csv()</a>
@@ -1341,7 +1341,7 @@ simply paste strings together:</p>
 </li>
 </ol>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
 <p>When dealing with dates using R, there are a few base functions that
 are useful to wrangle your dates in the correct format. An R package
 that is useful is <a href="https://cran.r-project.org/web/packages/lubridate/lubridate.pdf" class="external-link">lubridate</a>,
@@ -1734,7 +1734,7 @@ names to WoRMS.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-1" class="tab-pane show active" aria-labelledby="nav-tab-2-1" role="tabpanel">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
 <p>Create a CSV (comma separated value) file with the scientific name of
 the species of interest. Here we are showing some of the contents of the
 file <a href="../data/species.csv"><code>species.csv</code></a>.</p>
@@ -1801,7 +1801,7 @@ example linked above can be found <a href="../data/species_matched.xlsx">here</a
 be seen below: <img src="../fig/matched_species_screenshot.png" alt="screenshot" class="figure"></p></li>
 </ol>
 </div>
-<div id="nav-tabpanel-2-2" class="tab-pane" aria-labelledby="nav-tab-2-2" role="tabpanel">
+<div id="nav-tabpanel-2-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-2">
 <p><a href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=105838" class="external-link"><em>Carcharodon
 carcharias</em></a> (White shark)</p>
 <div class="codewrapper sourceCode" id="cb47">
@@ -1841,7 +1841,7 @@ carcharias</em></a> (White shark)</p>
 </li>
 </ol>
 </div>
-<div id="nav-tabpanel-2-3" class="tab-pane" aria-labelledby="nav-tab-2-3" role="tabpanel">
+<div id="nav-tabpanel-2-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-3">
 <p>Bringing in <a href="../data/species.csv"><code>species.csv</code></a>
 and collecting appropriate information from WoRMS using the pyworms
 package.</p>
@@ -2082,7 +2082,7 @@ coordinate pairs.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-1" class="tab-pane show active" aria-labelledby="nav-tab-3-1" role="tabpanel">
+<div id="nav-tabpanel-3-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-1">
 <ul>
 <li>This example assumes you have already split the two strings into
 discrete components (as shown in the table). An example converting the
@@ -2278,7 +2278,7 @@ two strings into discrete components (as shown in the table).</li>
 </li>
 </ol>
 </div>
-<div id="nav-tabpanel-3-2" class="tab-pane" aria-labelledby="nav-tab-3-2" role="tabpanel">
+<div id="nav-tabpanel-3-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-2">
 <p><code>17° 51' 57.96" S</code> <code>149° 39' 13.32" W</code></p>
 <div class="codewrapper sourceCode" id="cb63">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2805,7 +2805,7 @@ identifiers. Image credit: <a href="https://manual.obis.org/" class="external-li
   Event Core
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <table class="table">
 <colgroup>
@@ -2902,7 +2902,7 @@ OBIS and GBIF but it’s best to state explicitly that it is.</td>
   Occurrence extension
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <table class="table">
 <colgroup>
@@ -3006,7 +3006,7 @@ Location.</td>
   Extended Measurement or Fact Extension
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <p>Nothing is <em>required</em> from the OBIS perspective but if you are
 using this extension then <code>eventID</code> is required to be able to
@@ -3273,7 +3273,7 @@ notebook</a> to see how it works.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Hmisc::describe </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3473,7 +3473,7 @@ checks:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
@@ -4480,7 +4480,7 @@ or that you don’t understand what it is?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <pre class="folder"><code>dwca-tpwd_harc_texasaransasbay_bagseine-v2.3
  |-- eml.xml
@@ -4513,7 +4513,214 @@ observing or sampling method was used.</li>
 </div>
 </section><section><h2 class="section-heading" id="obis-usa-ipt-introduction">OBIS-USA IPT Introduction<a class="anchor" aria-label="anchor" href="#obis-usa-ipt-introduction"></a>
 </h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="occurrence-core">Occurrence Core<a class="anchor" aria-label="anchor" href="#occurrence-core"></a>
+<hr class="half-width">
+<p>he <a href="https://www.gbif.org/ipt" class="external-link">Integrated Publishing Toolkit
+(IPT)</a> is an open-source web application developed and maintained by
+the Global Biodiversity Information Facility (GBIF) for publishing
+biodiversity data. The IPT makes it easy to share four types of
+biodiversity-related information:</p>
+<ul>
+<li>primary taxon occurrence data</li>
+<li>sampling event data</li>
+<li>general metadata about data sources</li>
+<li>taxon checklists</li>
+</ul>
+<p>GBIF maintains a very detailed <a href="https://ipt.gbif.org/manual/en/ipt/latest/" class="external-link">IPT manual</a> and the
+<a href="https://manual.obis.org/data_publication.html" class="external-link">OBIS Manual</a>
+offers OBIS-specific details on publishing through the IPT. You can
+choose to download and install your own instance of the IPT but it might
+be complicated to register it with OBIS. Instead it’s recommended to
+work with one of the OBIS nodes to publish your data through their IPT.
+<a href="https://obis.org/contact/" class="external-link">OBIS nodes</a> publish data that are
+logical for their region or theme. After publishing the data through
+their IPT the data are harvested by central OBIS.</p>
+<p>The requirements for publishing via an OBIS node IPT are that:</p>
+<ol style="list-style-type: decimal">
+<li>you have contacted the node to ensure the data are a good fit for
+that node</li>
+<li>the data follows Darwin Core (DwC) and Ecological Metadata Language
+(EML)</li>
+<li>includes the required Darwin Core and EML metadata elements</li>
+</ol></section><section><h2 class="section-heading" id="ecological-metadata-language-eml">Ecological Metadata Language (EML)<a class="anchor" aria-label="anchor" href="#ecological-metadata-language-eml"></a>
+</h2>
+<hr class="half-width">
+<p>Both OBIS and GBIF use <a href="https://eml.ecoinformatics.org/" class="external-link">Ecological Metadata Language
+(EML)</a> as the metadata standard associated with the data. For the
+purposes of this workshop we will not dive into the world of EML.
+However, we should note that when publishing your data through the IPT,
+the IPT helps you create an EML file as part of the DwC-A. As such, if
+you publish your own data through the IPT, there is no need for innate
+knowledge on the EML format. But there are a minimum required number of
+fields that would need to be filled out in the IPT: <code>title</code>,
+<code>abstract</code>, <code>citation</code>, and several
+<code>contacts</code>.</p>
+<p>More information on EML can be found at the <a href="https://eml.ecoinformatics.org/" class="external-link">EML standard page</a>, and in the
+<a href="https://ioos.github.io/bio_data_guide/extras.html#ecological-metadata-language-eml" class="external-link">bio
+data guide</a>. There are also a number of R packages for working with
+EML, reviewed <a href="https://livingnorway.github.io/LivingNorwayR/articles/EML_R_packages_overview.html" class="external-link">here</a>.</p>
+<div id="tip" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="tip" class="callout-inner">
+<h3 class="callout-title">
+<span class="emoji" data-emoji="pushpin">📌</span> Tip</h3>
+<div class="callout-content">
+<p>Try to collect as much of this information as possible before and
+during the Darwin Core alignment process. It will significantly reduce
+the amount of time it takes to load the data into the IPT.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="required-eml-metadata-fields-for-sharing-to-obis">Required EML metadata fields for sharing to OBIS<a class="anchor" aria-label="anchor" href="#required-eml-metadata-fields-for-sharing-to-obis"></a>
+</h3>
+<p><em>Best practices for these fields are explained in detail in the <a href="https://manual.obis.org/eml" class="external-link">OBIS manual</a></em></p>
+<table class="table">
+<colgroup>
+<col width="37%">
+<col width="37%">
+<col width="25%">
+</colgroup>
+<thead><tr class="header">
+<th>EML Fields</th>
+<th>Definition</th>
+<th>Comment</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>Title</code></td>
+<td>A good descriptive title is indispensable and can provide the user
+with valuable information, making the discovery of data easier.</td>
+<td>The IPT also requires you to provide a Shortname. Shortnames serve
+as an identifier for the resource within the IPT installation and should
+be unique, descriptive and short (max. 100 characters). Spell out
+acronyms in Title but they are ok to use in the shortname.</td>
+</tr>
+<tr class="even">
+<td><code>Abstract</code></td>
+<td>The abstract or description of a dataset provides basic information
+on the content of the dataset. The information in the abstract should
+improve understanding and interpretation of the data.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>Data License</code></td>
+<td>The license that you apply to the resource. The license provides a
+standardized way to define appropriate uses of your work.</td>
+<td>Must use CC-0, CC-BY, or CC-BY-NC. Description of the licenses can
+be found <a href="https://manual.obis.org/policy.html#data-sharing-agreement" class="external-link">here</a>.</td>
+</tr>
+<tr class="even">
+<td><code>Resource Contact(s)</code></td>
+<td>The list of people and organizations that should be contacted to get
+more information about the resource, that curate the resource or to whom
+putative problems with the resource or its data should be
+addressed.</td>
+<td>Last name, Position, and Organization are required, helpful to
+include an ORCID and a contact method like email or phone number.</td>
+</tr>
+<tr class="odd">
+<td><code>Resource Creator(s)</code></td>
+<td>The people and organizations who created the resource, in priority
+order. The list will be used to auto-generate the resource citation (if
+auto-generation is turned on).</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>Metadata Provider(s)</code></td>
+<td>the people and organizations responsible for producing the resource
+metadata.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>Citation</code></td>
+<td>The dataset citation allows users to properly cite the datasets in
+further publications or other uses of the data. The OBIS download
+function provides a list of the dataset citations packaged with the data
+in a zipped file.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section level3">
+<h3 id="other-eml-fields-to-consider">Other EML fields to consider<a class="anchor" aria-label="anchor" href="#other-eml-fields-to-consider"></a>
+</h3>
+<table class="table">
+<colgroup>
+<col width="55%">
+<col width="25%">
+<col width="19%">
+</colgroup>
+<thead><tr class="header">
+<th>EML Fields</th>
+<th>Definition</th>
+<th>Comment</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>Bounding Box</code></td>
+<td>Farthest North, South, East, and West coordinate.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>Geographic Description</code></td>
+<td>A textual description of the geographic coverage.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>Temporal Coverage</code></td>
+<td>This can either be a Single Date, Date Range, Formation Period, or
+Living Time Period.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>Study Extent</code></td>
+<td>This field represents both a specific sampling area and the sampling
+frequency (temporal boundaries, frequency of occurrence) of the
+project.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>Sampling Description</code></td>
+<td>This field allows for a text-based/human readable description of the
+sampling procedures used in the research project.</td>
+<td>The content of this element would be similar to a description of
+sampling procedures found in the methods section of a journal
+article.</td>
+</tr>
+<tr class="even">
+<td><code>Step Description</code></td>
+<td>This field allows for repeated sets of elements that document a
+series of methods and procedures used in the study, and the processing
+steps leading to the production of the data files. These include
+e.g. text descriptions of the procedures, relevant literature, software,
+instrumentation and any quality control measurements taken.</td>
+<td>Each method should be described in enough detail to allow other
+researchers to interpret and repeat the study, if required.</td>
+</tr>
+</tbody>
+</table>
+<div id="keypoints2" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>The IPT is a well-documented and flexible system for publishing data
+to OBIS.</li>
+<li>Some Darwin Core and Ecological Metadata Language fields are
+required for publishing to OBIS.</li>
+<li>More metadata is better than less.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="occurrence-core">Occurrence Core<a class="anchor" aria-label="anchor" href="#occurrence-core"></a>
 </h2>
 <hr class="half-width">
 <p>Now that we have a firm basis for understanding the different terms
@@ -4543,7 +4750,7 @@ Guide</a>.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What terms are required in Occurrence Core? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <table class="table">
 <colgroup>
@@ -4690,7 +4897,7 @@ list</a> for updates.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What terms are required in Event core? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <table class="table">
 <colgroup>
@@ -4834,11 +5041,11 @@ with a <a href="https://vocab.nerc.ac.uk/search_nvs/P06/?searchstr=&amp;options=
 P06 code</a>. OBIS is soon releasing video tutorials to help with
 choosing URIs, so stay tuned to their <a href="https://manual.obis.org/" class="external-link">manual</a> and <a href="https://www.youtube.com/@oceanbiodiversityinformati6931/playlists" class="external-link">YouTube
 list</a> for updates.</p>
-<div id="tip" class="callout">
+<div id="tip-1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="tip" class="callout-inner">
+<div id="tip-1" class="callout-inner">
 <h3 class="callout-title">
 <span class="emoji" data-emoji="pushpin">📌</span> Tip</h3>
 <div class="callout-content">
@@ -4855,7 +5062,7 @@ data.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
   <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Extended Measurement or Fact Extension Terms </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <p>Nothing is <em>required</em> from the OBIS perspective but if you are
 using this extension then <code>eventID</code> is required to be able to
