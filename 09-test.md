@@ -68,6 +68,10 @@ dwca-tpwd_harc_texasaransasbay_bagseine-v2.3
 ## OBIS-USA IPT Introduction
 
 ## Occurrence Core
+Now that we have a firm basis for understanding the different terms in Darwin Core the next part to understand is how data tables are organized and the difference between cores and extensions. You will always have a core table (Occurrence core or Event core) with either no extensions or several. What you choose depends on the data you have and how to represent it best. 
+
+The original Darwin Core core is the Occurrence Core. Once people started using that core they began to see that they needed extensions to that core to best represent the data they were trying to share and therefore several extensions have been developed (and are continuing to be developed). As more monitoring data has been shared over time, another core type called Event Core was added. Without getting too far into the weeds on the cores and extensions, what’s most important to understand is that you need to pick your core type and once you do that then you pick the extensions to go with it. For example, if your data took place as part of an event (cruise, transects, etc) you will pick Event Core. If there was no sampling event, then you will pick Occurrence Core.
+
 When you are doing your mappings to Darwin Core, what terms are required? What other terms might be useful to include? You can find the full list of Darwin Core Occurrence terms on the [Quick Reference Guide](https://dwc.tdwg.org/terms/#occurrence).
 
 | Darwin Core Term | Role | Definition | Comment | Example |
@@ -80,7 +84,40 @@ When you are doing your mappings to Darwin Core, what terms are required? What o
 | [`kingdom`](https://dwc.tdwg.org/terms/#dwc:kingdom) | **required** | The full scientific name of the kingdom in which the taxon is classified.| Not required for OBIS but GBIF needs this to disambiguate scientific names that are the same but in different kingdoms. | Animalia |
 
 ## Event Core
-What terms are required in Event core?
+As we have indicated earlier, the Event core is for datasets that include known sampling events - details are known 
+about how, when, and where samples were taken.
+
+An innovation that OBIS made was introducing the Extended Measurement or Fact extension (also sometimes referred to as 
+OBIS-ENV-DATA, or eMoF). This uses the Event core with an Occurrence extension + the 
+[extended Measurement or Fact extension](https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml). The eMoF 
+extension makes it possible to include measurements for **both** the events (salinity, temperature, gear type, etc.) and 
+the occurrences (weight, length, etc.). Prior to this you were only able to include measurements of the occurrence (in 
+the Measurement or Facts extension).
+
+It is important to know that the structure of the eMoF table is likely quite a bit different than how the original data 
+are recorded in your dataset. Rather than documenting each measurement in separate columns, measurements will be 
+condensed into one column: `measurementValue` (e.g. 15). Then, the column `measurementType`  allows free text 
+describing what the measurement actually is (e.g. length). Finally the column `measurementUnit` is used to indicate the 
+unit of the measurement (e.g. cm).
+
+The unconstrained nature of `measurementType` allows for flexibility in describing measurements, which can be quite a 
+useful. But what if you wanted to obtain all OBIS records that have "length" measurements? Due to the inevitable 
+heterogeneity in how different people document "length", you would have to try to account for all these different ways! 
+Fortunately the eMoF table can get around this challenge by providing a way to include Unique Resource Identifiers 
+(URIs). These URIs are used to populate the `measurementTypeID` field, as well as `measurementUnitID` and 
+`measurementValueID`. URIs mean that if you call the `measurementType` "abundance" but I call it "Abundance per square 
+meter" and we both use the `measurementTypeID` "http://vocab.nerc.ac.uk/collection/P01/current/SDBIOL02/" then we know 
+this is the same measurement type even if we didn't use the same words to describe it. Choosing the right URI can be 
+difficult but you can read about finding codes in 
+[the OBIS Manual](https://manual.obis.org/vocabulary.html#map-emof-measurement-identifiers-to-preferred-bodc-vocabulary). 
+All you need to know for now is that `measurementTypeID` should be populated with a URI belonging to the NERC P01 
+collection, easily accessible through the [SeaDataNet P01 facet search](https://vocab.seadatanet.org/p01-facet-search), 
+and `measurementUnitID` should be popualted with a 
+[NERC P06 code](https://vocab.nerc.ac.uk/search_nvs/P06/?searchstr=&options=identifier,preflabel,altlabel,status_accepted&rbaddfilter=inc&searchstr2=). 
+OBIS is soon releasing video tutorials to help with choosing URIs, so stay tuned to their [manual](https://manual.obis.org/) 
+and [YouTube list](https://www.youtube.com/@oceanbiodiversityinformati6931/playlists) for updates.
+
+:::::::::::: spoiler What terms are required in Event core?
 
 | Darwin Core Term | Role | Definition | Comment | Example |
 |------------------|-----------|-------------------------------------------|---------------------------------------|-----------------|
@@ -90,6 +127,8 @@ What terms are required in Event core?
 | [`decimalLongitude`](https://dwc.tdwg.org/terms/#dwc:decimalLongitude) | **required** | The geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive | For OBIS and GBIF the required `geodeticDatum` is WGS84. See more information on coordinates in the [Data Cleaning]({{ page.root }}/03-data-cleaning/index.html) section of the workshop. | -121.1761111 |
 | [`countryCode`](https://dwc.tdwg.org/terms/#dwc:countryCode) | **required** | The standard code for the country in which the location occurs. | Use an [ISO 3166-1-alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code. Not required for OBIS but GBIF prefers to have this for their system. For international waters, leave blank. | US, MX, CA |
 | [`geodeticDatum`](https://dwc.tdwg.org/terms/#dwciri:geodeticDatum) | **required** | The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in decimalLatitude and decimalLongitude as based. | Must be [WGS84](https://epsg.io/4326) for data shared to OBIS and GBIF but it's best to state explicitly that it is. | WGS84 |
+
+::::::::::::::::::::
 
 ## Extensions
 Nothing is required from the OBIS perspective but if you are using the Extended Measurement or Fact extension other than eventID, which is required to link the extension back to the Event core. You can also use occurrenceID to link to occurrence records in the Occurrence core or extension. See here for all potential fields in the extension and what goes in them. See below of the most relevant terms to be included in the eMoF table.
