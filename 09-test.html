@@ -489,7 +489,25 @@ observing or sampling method was used.</li>
 </div>
 </section><section><h2 class="section-heading" id="obis-usa-ipt-introduction">OBIS-USA IPT Introduction<a class="anchor" aria-label="anchor" href="#obis-usa-ipt-introduction"></a></h2>
 <hr class="half-width"></section><section><h2 class="section-heading" id="occurrence-core">Occurrence Core<a class="anchor" aria-label="anchor" href="#occurrence-core"></a></h2>
-<hr class="half-width"><p>When you are doing your mappings to Darwin Core, what terms are
+<hr class="half-width"><p>Now that we have a firm basis for understanding the different terms
+in Darwin Core the next part to understand is how data tables are
+organized and the difference between cores and extensions. You will
+always have a core table (Occurrence core or Event core) with either no
+extensions or several. What you choose depends on the data you have and
+how to represent it best.</p>
+<p>The original Darwin Core core is the Occurrence Core. Once people
+started using that core they began to see that they needed extensions to
+that core to best represent the data they were trying to share and
+therefore several extensions have been developed (and are continuing to
+be developed). As more monitoring data has been shared over time,
+another core type called Event Core was added. Without getting too far
+into the weeds on the cores and extensions, what’s most important to
+understand is that you need to pick your core type and once you do that
+then you pick the extensions to go with it. For example, if your data
+took place as part of an event (cruise, transects, etc) you will pick
+Event Core. If there was no sampling event, then you will pick
+Occurrence Core.</p>
+<p>When you are doing your mappings to Darwin Core, what terms are
 required? What other terms might be useful to include? You can find the
 full list of Darwin Core Occurrence terms on the <a href="https://dwc.tdwg.org/terms/#occurrence" class="external-link">Quick Reference
 Guide</a>.</p>
@@ -559,7 +577,50 @@ classified.</td>
 names that are the same but in different kingdoms.</td>
 <td>Animalia</td>
 </tr></tbody></table></section><section><h2 class="section-heading" id="event-core">Event Core<a class="anchor" aria-label="anchor" href="#event-core"></a></h2>
-<hr class="half-width"><p>What terms are required in Event core?</p>
+<hr class="half-width"><p>As we have indicated earlier, the Event core is for datasets that
+include known sampling events - details are known about how, when, and
+where samples were taken.</p>
+<p>An innovation that OBIS made was introducing the Extended Measurement
+or Fact extension (also sometimes referred to as OBIS-ENV-DATA, or
+eMoF). This uses the Event core with an Occurrence extension + the <a href="https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml" class="external-link">extended
+Measurement or Fact extension</a>. The eMoF extension makes it possible
+to include measurements for <strong>both</strong> the events (salinity,
+temperature, gear type, etc.) and the occurrences (weight, length,
+etc.). Prior to this you were only able to include measurements of the
+occurrence (in the Measurement or Facts extension).</p>
+<p>It is important to know that the structure of the eMoF table is
+likely quite a bit different than how the original data are recorded in
+your dataset. Rather than documenting each measurement in separate
+columns, measurements will be condensed into one column:
+<code>measurementValue</code> (e.g. 15). Then, the column
+<code>measurementType</code> allows free text describing what the
+measurement actually is (e.g. length). Finally the column
+<code>measurementUnit</code> is used to indicate the unit of the
+measurement (e.g. cm).</p>
+<p>The unconstrained nature of <code>measurementType</code> allows for
+flexibility in describing measurements, which can be quite a useful. But
+what if you wanted to obtain all OBIS records that have “length”
+measurements? Due to the inevitable heterogeneity in how different
+people document “length”, you would have to try to account for all these
+different ways! Fortunately the eMoF table can get around this challenge
+by providing a way to include Unique Resource Identifiers (URIs). These
+URIs are used to populate the <code>measurementTypeID</code> field, as
+well as <code>measurementUnitID</code> and
+<code>measurementValueID</code>. URIs mean that if you call the
+<code>measurementType</code> “abundance” but I call it “Abundance per
+square meter” and we both use the <code>measurementTypeID</code> “<a href="http://vocab.nerc.ac.uk/collection/P01/current/SDBIOL02/" class="external-link uri">http://vocab.nerc.ac.uk/collection/P01/current/SDBIOL02/</a>”
+then we know this is the same measurement type even if we didn’t use the
+same words to describe it. Choosing the right URI can be difficult but
+you can read about finding codes in <a href="https://manual.obis.org/vocabulary.html#map-emof-measurement-identifiers-to-preferred-bodc-vocabulary" class="external-link">the
+OBIS Manual</a>. All you need to know for now is that
+<code>measurementTypeID</code> should be populated with a URI belonging
+to the NERC P01 collection, easily accessible through the <a href="https://vocab.seadatanet.org/p01-facet-search" class="external-link">SeaDataNet P01
+facet search</a>, and <code>measurementUnitID</code> should be popualted
+with a <a href="https://vocab.nerc.ac.uk/search_nvs/P06/?searchstr=&amp;options=identifier,preflabel,altlabel,status_accepted&amp;rbaddfilter=inc&amp;searchstr2=" class="external-link">NERC
+P06 code</a>. OBIS is soon releasing video tutorials to help with
+choosing URIs, so stay tuned to their <a href="https://manual.obis.org/" class="external-link">manual</a> and <a href="https://www.youtube.com/@oceanbiodiversityinformati6931/playlists" class="external-link">YouTube
+list</a> for updates.</p>
+<p>:::::::::::: spoiler What terms are required in Event core?</p>
 <table class="table"><colgroup><col width="14%"><col width="8%"><col width="33%"><col width="30%"><col width="13%"></colgroup><thead><tr class="header"><th>Darwin Core Term</th>
 <th>Role</th>
 <th>Definition</th>
@@ -624,7 +685,8 @@ decimalLongitude as based.</td>
 <td>Must be <a href="https://epsg.io/4326" class="external-link">WGS84</a> for data shared to
 OBIS and GBIF but it’s best to state explicitly that it is.</td>
 <td>WGS84</td>
-</tr></tbody></table></section><section><h2 class="section-heading" id="extensions">Extensions<a class="anchor" aria-label="anchor" href="#extensions"></a></h2>
+</tr></tbody></table><p>::::::::::::::::::::</p>
+</section><section><h2 class="section-heading" id="extensions">Extensions<a class="anchor" aria-label="anchor" href="#extensions"></a></h2>
 <hr class="half-width"><p>Nothing is required from the OBIS perspective but if you are using
 the Extended Measurement or Fact extension other than eventID, which is
 required to link the extension back to the Event core. You can also use
