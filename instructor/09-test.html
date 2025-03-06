@@ -434,14 +434,14 @@ data gaps where other observations may not exist.</p>
 </div>
 <div class="section level4">
 <h4 id="darwin-core-archives">Darwin Core Archives<a class="anchor" aria-label="anchor" href="#darwin-core-archives"></a></h4>
-<p>Darwin Core Archives are what OBIS and GBIF harvest into their
-systems. Fortunately, the software created and maintained by GBIF, the
-<a href="https://www.gbif.org/ipt" class="external-link">Integrated Publishing Toolkit</a>
-(IPT), produces Darwin Core Archives for us. Darwin Core Archives are
-pretty simple. It’s a zipped folder containing the data (one or several
-files depending on how many extensions you use), an Ecological Metadata
-Language (EML) XML file, and a meta.xml file that describes what’s in
-the zipped folder.</p>
+<p>A Darwin Core Archive is a zipped folder containing Darwin
+Core-formatted data (one or several files depending on how many
+extensions you use), an Ecological Metadata Language (EML) XML file, and
+a meta.xml file that describes what’s in the zipped folder. Darwin Core
+Archives are what OBIS and GBIF harvest into their systems. Fortunately,
+the software created and maintained by GBIF, the <a href="https://www.gbif.org/ipt" class="external-link">Integrated Publishing Toolkit</a> (IPT),
+produces Darwin Core Archives for us. We will be learning more about the
+IPT in the <a href="#obis-usa-ipt-introduction">next section</a>.</p>
 <div id="challenge" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -460,7 +460,7 @@ or that you don’t understand what it is?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <pre class="folder"><code>dwca-tpwd_harc_texasaransasbay_bagseine-v2.3
  |-- eml.xml
