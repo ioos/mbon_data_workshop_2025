@@ -409,7 +409,18 @@ Standards (or <a href="https://www.tdwg.org/" class="external-link">TDWG</a>) as
 Darwin Core consists of a glossary of terms that facilitate the sharing
 of information about biological occurrences as documented by
 observations, specimens, samples, and other evidence. To see a full list
-of Darwin Core terms, please see the <a href="https://dwc.tdwg.org/terms/" class="external-link">Quick Reference Guide</a>.</p>
+of Darwin Core terms, please see the <a href="https://dwc.tdwg.org/terms/" class="external-link">Quick Reference Guide</a>. To learn
+more about the foundations of Darwin Core, read <a href="https://doi.org/10.1371/journal.pone.0029715" class="external-link">Wieczorek et al.,
+2012</a>.</p>
+<p>Observations of marine life can be translated into Darwin Core and
+shared regardless of the observing method. At the end of the day,
+biological occurrences are data about an organism at a time in a place.
+That is the essence of what we want to capture with Darwin Core. Any
+additional information you can provide on top of that (environmental
+variables at the time of the observation, data about how the occurrence
+was determined, etc.) is icing on the cake.</p>
+<div class="section level4">
+<h4 id="demonstrated-use-of-darwin-core">Demonstrated Use of Darwin Core<a class="anchor" aria-label="anchor" href="#demonstrated-use-of-darwin-core"></a></h4>
 <p>As members of the ocean observing community, it is important for us
 to share our data in the Darwin Core format so it can be easily
 aggregated and analyzed with other biological occurrences that have been
@@ -420,13 +431,47 @@ Facility</a> (GBIF; containing over 3 billion records at the time of
 this workshop). By adding our data to these systems, we can enhance what
 is known about marine life in U.S. waters and globally, and help fill
 data gaps where other observations may not exist.</p>
-<p>Observations of marine life can be translated into Darwin Core and
-shared regardless of the observing method. At the end of the day,
-biological occurrences are data about an organism at a time in a place.
-That is the essence of what we want to capture with Darwin Core. Any
-additional information you can provide on top of that (environmental
-variables at the time of the observation, data about how the occurrence
-was determined, etc.) is icing on the cake.</p>
+</div>
+<div class="section level4">
+<h4 id="darwin-core-archives">Darwin Core Archives<a class="anchor" aria-label="anchor" href="#darwin-core-archives"></a></h4>
+<p>Darwin Core Archives are what OBIS and GBIF harvest into their
+systems. Fortunately, the software created and maintained by GBIF, the
+<a href="https://www.gbif.org/ipt" class="external-link">Integrated Publishing Toolkit</a>
+(IPT), produces Darwin Core Archives for us. Darwin Core Archives are
+pretty simple. It’s a zipped folder containing the data (one or several
+files depending on how many extensions you use), an Ecological Metadata
+Language (EML) XML file, and a meta.xml file that describes what’s in
+the zipped folder.</p>
+<div id="challenge" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge" class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Download this <a href="https://ipt-obis.gbif.us/archive.do?r=tpwd_harc_texasaransasbay_bagseine&amp;v=2.3" class="external-link">Darwin
+Core Archive</a> and examine what’s in it. Did you find anything unusual
+or that you don’t understand what it is?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<pre class="folder"><code>dwca-tpwd_harc_texasaransasbay_bagseine-v2.3
+ |-- eml.xml
+ |-- event.txt
+ |-- extendedmeasurementorfact.txt
+ |-- meta.xml
+ `-- occurrence.txt</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -441,6 +486,7 @@ observing or sampling method was used.</li>
 <strong>where</strong>.</li>
 <li>To see a full list of Darwin Core terms, see the <a href="https://dwc.tdwg.org/terms/" class="external-link">Quick Reference Guide</a>.</li>
 </ul></div>
+</div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="obis-usa-ipt-introduction">OBIS-USA IPT Introduction<a class="anchor" aria-label="anchor" href="#obis-usa-ipt-introduction"></a></h2>
