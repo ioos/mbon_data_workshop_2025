@@ -74,6 +74,10 @@ The original Darwin Core core is the Occurrence Core. Once people started using 
 
 When you are doing your mappings to Darwin Core, what terms are required? What other terms might be useful to include? You can find the full list of Darwin Core Occurrence terms on the [Quick Reference Guide](https://dwc.tdwg.org/terms/#occurrence).
 
+:::::::::::: spoiler
+
+## What terms are required in Occurrence Core?
+
 | Darwin Core Term | Role | Definition | Comment | Example |
 |------------------|-----------|-------------------------------------------|---------------------------------------|-----------------|
 | [`occurrenceID`](https://dwc.tdwg.org/terms/#dwc:occurrenceID) | **required** | An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique. | To construct a globally unique identifier for each occurrence you can usually concatenate station + date + scientific name (or something similar) but you'll need to check this is unique for each row in your data. It is preferred to use the fields that are least likely to change in the future for this. For ways to check the uniqueness of your occurrenceIDs see the [QA / QC]({{ page.root }}/06-qa-qc/index.html) section of the workshop. | Station_95_Date_09JAN1997:14:35:00.000_Atractosteus_spatula |
@@ -82,6 +86,8 @@ When you are doing your mappings to Darwin Core, what terms are required? What o
 | [`scientificNameID`](https://dwc.tdwg.org/terms/#dwc:scientificNameID) | **required** | An identifier for the nomenclatural (not taxonomic) details of a scientific name. | Must be a WoRMS LSID for sharing to OBIS. Note that the numbers at the end are the AphiaID from WoRMS. | urn:lsid:marinespecies.org:taxname:218214 |
 | [`occurrenceStatus`](https://dwc.tdwg.org/terms/#dwc:occurrenceStatus) | **required** | A statement about the presence or absence of a Taxon at a Location. | For OBIS, only valid values are `present` and `absent`. | present |
 | [`kingdom`](https://dwc.tdwg.org/terms/#dwc:kingdom) | **required** | The full scientific name of the kingdom in which the taxon is classified.| Not required for OBIS but GBIF needs this to disambiguate scientific names that are the same but in different kingdoms. | Animalia |
+
+::::::::::::::::::::
 
 ## Event Core
 As we have indicated earlier, the Event core is for datasets that include known sampling events - details are known 
@@ -117,7 +123,9 @@ and `measurementUnitID` should be popualted with a
 OBIS is soon releasing video tutorials to help with choosing URIs, so stay tuned to their [manual](https://manual.obis.org/) 
 and [YouTube list](https://www.youtube.com/@oceanbiodiversityinformati6931/playlists) for updates.
 
-:::::::::::: spoiler What terms are required in Event core?
+:::::::::::: spoiler
+
+## What terms are required in Event core?
 
 | Darwin Core Term | Role | Definition | Comment | Example |
 |------------------|-----------|-------------------------------------------|---------------------------------------|-----------------|
