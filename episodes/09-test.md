@@ -207,7 +207,7 @@ and [YouTube list](https://www.youtube.com/@oceanbiodiversityinformati6931/playl
 
 | Darwin Core Term | Role | Definition | Comment | Example |
 |------------------|-----------|-------------------------------------------|---------------------------------------|-----------------|
-| [eventID](https://dwc.tdwg.org/terms/#dwc:eventID) | **required** | An identifier for the set of information associated with an Event (something that occurs at a place and time). May be a global unique identifier or an identifier specific to the data set. | `INBO:VIS:Ev:00009375`<br/>`Station_95_Date_09JAN1997:14:35:00.000` <br/> `FFS-216:2007-09-21:A:replicateID1024`|
+| [eventID](https://dwc.tdwg.org/terms/#dwc:eventID) | **required** | An identifier for the set of information associated with an Event (something that occurs at a place and time). May be a global unique identifier or an identifier specific to the data set. | | `INBO:VIS:Ev:00009375`<br/>`Station_95_Date_09JAN1997:14:35:00.000` <br/> `FFS-216:2007-09-21:A:replicateID1024`|
 | [`eventDate`](https://dwc.tdwg.org/terms/#dwc:eventDate) | **required** | The date-time or interval during which an Event occurred. For occurrences, this is the date-time when the event was recorded. Not suitable for a time in a geological context. | Must follow [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601). See more information on dates in the [Data Cleaning]({{ page.root }}/03-data-cleaning/index.html) section of the workshop. | 2009-02-20T08:40Z |
 | [`decimalLatitude`](https://dwc.tdwg.org/terms/#dwc:decimalLatitude) | **required** | The geographic latitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive. | For OBIS and GBIF the required `geodeticDatum` is WGS84. Uncertainty around the geographic center of a Location (e.g. when sampling event was a transect) can be recorded in `coordinateUncertaintyInMeters`. See more information on coordinates in the [Data Cleaning]({{ page.root }}/03-data-cleaning/index.html) section of the workshop. | -41.0983423 |
 | [`decimalLongitude`](https://dwc.tdwg.org/terms/#dwc:decimalLongitude) | **required** | The geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive | For OBIS and GBIF the required `geodeticDatum` is WGS84. See more information on coordinates in the [Data Cleaning]({{ page.root }}/03-data-cleaning/index.html) section of the workshop. | -121.1761111 |
@@ -301,23 +301,31 @@ In the [IOOS Bio Data Guide repository](https://github.com/ioos/bio_data_guide),
 
 ### Passive Acoustic Monitoring (PAM)
 #### Key Points
-
+* For passive acoustic monitoring data, it is really important to define a `coordinateUncertaintyInMeters`. We defined this by using the sound propagation modeling data, matching on frequency, site, and season.
+* The sound propagation data were massive and hard to work with on Google Cloud Storage. But, `gsutil` made it easy to download all of the necessary files.
+* The metadata available from the ERDDAP source and the netCDF sound propagation data were immensly helpful for mapping to Darwin Core.
+* Extracting information from file names is a relatively easy process and can be beneficial when aligning to Darwin Core.
+* Performing Darwin Core checks before sending data to OBIS-USA helps reduce the amount of iteration with the node manager.
+* You can see the entire conversation for mobilizing these data at <https://github.com/ioos/bio_data_guide/issues/147>.
 
 #### Resources
 * To see how the SanctSound project processes their PAM data and distills it into DwC, see [here](https://github.com/ioos/bio_data_guide/blob/main/datasets/SanctSound/README.md).
 
 ### Plankton Imagery
 #### Key Points
-
+* 
 
 #### Resources
-*
-*
 *
 
 ### Animal Telemetry
 #### Key Points
-
+* Animal Telemetry observations are collected at a very high frequency (sometimes in the 10's Hz), so the current leading practice is to bin the observations to the first observation of each hour.
+* `coordinateUncertaintyInMeters` will be highly dependent on your sampling methodology (acoustic vs satellite) and even nuanced between manufacturers. Pay attention to the details to ensure the coordinates are appropriately represented and the uncertainty is appropriately documented.
 
 #### Resources
 * For more detailed information about how to translate acoustic and satellite telemetry into DwC, see [here](https://ioos.github.io/mbon_data_workshop_2025/acoustic-telemetry.html).
+* Data guidelines for Darwin Core for biologging - <https://github.com/tdwg/dwc-for-biologging/wiki/Data-guidelines>
+* Acoustic sensor enabled tracking of blue sharks - <https://github.com/tdwg/dwc-for-biologging/wiki/Acoustic-sensor-enabled-tracking-of-blue-sharks>
+* Movebank GPS data - <https://github.com/tdwg/dwc-for-biologging/wiki/Movebank-GPS-data>
+* Converting ATN netCDF file to Darwin Core - <https://ioos.github.io/bio_data_guide/datasets/atn_satellite_telemetry/atn_satellite_telemetry_netCDF2DwC.html>
