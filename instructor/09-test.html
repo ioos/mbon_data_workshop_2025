@@ -359,7 +359,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>MBON Workshop Test</h1>
-        <p>Last updated on 2025-03-06 |
+        <p>Last updated on 2025-03-07 |
 
         <a href="https://github.com/ioos/mbon_data_workshop_2025/edit/main/episodes/09-test.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -800,11 +800,11 @@ list</a> for updates.</p>
 <td>An identifier for the set of information associated with an Event
 (something that occurs at a place and time). May be a global unique
 identifier or an identifier specific to the data set.</td>
+<td></td>
 <td>
 <code>INBO:VIS:Ev:00009375</code><br><code>Station_95_Date_09JAN1997:14:35:00.000</code>
 <br><code>FFS-216:2007-09-21:A:replicateID1024</code>
 </td>
-<td></td>
 </tr><tr class="even"><td><a href="https://dwc.tdwg.org/terms/#dwc:eventDate" class="external-link"><code>eventDate</code></a></td>
 <td><strong>required</strong></td>
 <td>The date-time or interval during which an Event occurred. For
@@ -1056,7 +1056,21 @@ project</a>.</li>
 <h3 id="passive-acoustic-monitoring-pam">Passive Acoustic Monitoring (PAM)<a class="anchor" aria-label="anchor" href="#passive-acoustic-monitoring-pam"></a></h3>
 <div class="section level4">
 <h4 id="key-points-1">Key Points<a class="anchor" aria-label="anchor" href="#key-points-1"></a></h4>
-</div>
+<ul><li>For passive acoustic monitoring data, it is really important to
+define a <code>coordinateUncertaintyInMeters</code>. We defined this by
+using the sound propagation modeling data, matching on frequency, site,
+and season.</li>
+<li>The sound propagation data were massive and hard to work with on
+Google Cloud Storage. But, <code>gsutil</code> made it easy to download
+all of the necessary files.</li>
+<li>The metadata available from the ERDDAP source and the netCDF sound
+propagation data were immensly helpful for mapping to Darwin Core.</li>
+<li>Extracting information from file names is a relatively easy process
+and can be beneficial when aligning to Darwin Core.</li>
+<li>Performing Darwin Core checks before sending data to OBIS-USA helps
+reduce the amount of iteration with the node manager.</li>
+<li>You can see the entire conversation for mobilizing these data at <a href="https://github.com/ioos/bio_data_guide/issues/147" class="external-link uri">https://github.com/ioos/bio_data_guide/issues/147</a>.</li>
+</ul></div>
 <div class="section level4">
 <h4 id="resources-1">Resources<a class="anchor" aria-label="anchor" href="#resources-1"></a></h4>
 <ul><li>To see how the SanctSound project processes their PAM data and
@@ -1067,26 +1081,39 @@ distills it into DwC, see <a href="https://github.com/ioos/bio_data_guide/blob/m
 <h3 id="plankton-imagery">Plankton Imagery<a class="anchor" aria-label="anchor" href="#plankton-imagery"></a></h3>
 <div class="section level4">
 <h4 id="key-points-2">Key Points<a class="anchor" aria-label="anchor" href="#key-points-2"></a></h4>
-</div>
+<ul><li>
+</li></ul></div>
 <div class="section level4">
 <h4 id="resources-2">Resources<a class="anchor" aria-label="anchor" href="#resources-2"></a></h4>
 <ul><li>
-</li>
-<li>
-</li>
-<li>
-</li>
-</ul></div>
+</li></ul></div>
 </div>
 <div class="section level3">
 <h3 id="animal-telemetry">Animal Telemetry<a class="anchor" aria-label="anchor" href="#animal-telemetry"></a></h3>
 <div class="section level4">
 <h4 id="key-points-3">Key Points<a class="anchor" aria-label="anchor" href="#key-points-3"></a></h4>
-</div>
+<ul><li>Animal Telemetry observations are collected at a very high frequency
+(sometimes in the 10’s Hz), so the current leading practice is to bin
+the observations to the first observation of each hour.</li>
+<li>
+<code>coordinateUncertaintyInMeters</code> will be highly dependent
+on your sampling methodology (acoustic vs satellite) and even nuanced
+between manufacturers. Pay attention to the details to ensure the
+coordinates are appropriately represented and the uncertainty is
+appropriately documented.</li>
+</ul></div>
 <div class="section level4">
 <h4 id="resources-3">Resources<a class="anchor" aria-label="anchor" href="#resources-3"></a></h4>
 <ul><li>For more detailed information about how to translate acoustic and
 satellite telemetry into DwC, see <a href="https://ioos.github.io/mbon_data_workshop_2025/acoustic-telemetry.html" class="external-link">here</a>.</li>
+<li>Data guidelines for Darwin Core for biologging - <a href="https://github.com/tdwg/dwc-for-biologging/wiki/Data-guidelines" class="external-link uri">https://github.com/tdwg/dwc-for-biologging/wiki/Data-guidelines</a>
+</li>
+<li>Acoustic sensor enabled tracking of blue sharks - <a href="https://github.com/tdwg/dwc-for-biologging/wiki/Acoustic-sensor-enabled-tracking-of-blue-sharks" class="external-link uri">https://github.com/tdwg/dwc-for-biologging/wiki/Acoustic-sensor-enabled-tracking-of-blue-sharks</a>
+</li>
+<li>Movebank GPS data - <a href="https://github.com/tdwg/dwc-for-biologging/wiki/Movebank-GPS-data" class="external-link uri">https://github.com/tdwg/dwc-for-biologging/wiki/Movebank-GPS-data</a>
+</li>
+<li>Converting ATN netCDF file to Darwin Core - <a href="https://ioos.github.io/bio_data_guide/datasets/atn_satellite_telemetry/atn_satellite_telemetry_netCDF2DwC.html" class="external-link uri">https://ioos.github.io/bio_data_guide/datasets/atn_satellite_telemetry/atn_satellite_telemetry_netCDF2DwC.html</a>
+</li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -1150,8 +1177,8 @@ any links that you are not going to use.
   "url": "https://ioos.github.io/mbon_data_workshop_2025/instructor/09-test.html",
   "identifier": "https://ioos.github.io/mbon_data_workshop_2025/instructor/09-test.html",
   "dateCreated": "2025-01-07",
-  "dateModified": "2025-03-06",
-  "datePublished": "2025-03-06"
+  "dateModified": "2025-03-07",
+  "datePublished": "2025-03-07"
 }
 
   </script><script>
